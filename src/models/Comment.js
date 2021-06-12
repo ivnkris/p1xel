@@ -29,25 +29,25 @@ const schema = {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-        model: "user",
-        key: "id",
-    }
+      model: "user",
+      key: "id",
+    },
   },
   game_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-        model: "game",
-        key: "id",
-    }
+      model: "game",
+      key: "id",
+    },
   },
-  user_ratings: {
+  user_rating: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-        model: "rating",
-        key: "id",
-    }
+      model: "rating",
+      key: "id",
+    },
   },
 };
 
