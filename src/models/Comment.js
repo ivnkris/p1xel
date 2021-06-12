@@ -41,14 +41,14 @@ const schema = {
       key: "id",
     },
   },
-  user_rating: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "rating",
-      key: "id",
-    },
-  },
+  // user_rating: {
+  //   type: DataTypes.INTEGER,
+  //   allowNull: false,
+  //   references: {
+  //     model: "rating",
+  //     key: "id",
+  //   },
+  // },
 };
 
 class Comment extends Model {}

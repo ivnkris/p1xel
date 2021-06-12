@@ -1,9 +1,7 @@
+require("dotenv").config();
 const sequelize = require("../../config/connection");
 
-const User = require("../../models/User");
-const Game = require("../../models/Game");
-const Comment = require("../../models/Comment");
-const Rating = require("../../models/Rating");
+const { User, Game, Rating, Comment } = require("../../models");
 
 const users = require("./data/users.json");
 const comments = require("./data/comments.json");

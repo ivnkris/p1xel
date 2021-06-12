@@ -17,12 +17,16 @@ const schema = {
     primaryKey: true,
     autoIncrement: true,
   },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   cover_art: {
     type: DataTypes.STRING,
     allowNull: false,
   },
   screenshots: {
-    type: DataTypes.ARRAY(DataTypes.STRING),
+    type: DataTypes.STRING,
     allowNull: false,
   },
   critic_rating: {
@@ -38,7 +42,7 @@ const schema = {
     allowNull: false,
   },
   release_date: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
   platform: {
@@ -59,28 +63,25 @@ const schema = {
   },
   user_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
       model: "user",
       key: "id",
     },
   },
-  user_comment: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "comment",
-      key: "id",
-    },
-  },
-  user_rating: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: "rating",
-      key: "id",
-    },
-  },
+  // user_comment: {
+  //   type: DataTypes.INTEGER,
+  //   references: {
+  //     model: "comment",
+  //     key: "id",
+  //   },
+  // },
+  // user_rating: {
+  //   type: DataTypes.INTEGER,
+  //   references: {
+  //     model: "rating",
+  //     key: "id",
+  //   },
+  // },
 };
 
 class Game extends Model {}

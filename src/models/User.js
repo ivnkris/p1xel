@@ -51,7 +51,8 @@ const schema = {
     defaultValue: "insert picture here",
   },
   friends: {
-    type: DataTypes.ARRAY(DataTypes.INTEGER),
+    type: DataTypes.STRING,
+    allowNull: true,
   },
 };
 
