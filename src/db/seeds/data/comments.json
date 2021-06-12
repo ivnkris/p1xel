@@ -1,0 +1,26 @@
+[
+  {
+    "title": "first comment",
+    "body": "this is my first comment",
+    "user_id": 1,
+    "game_id": 1
+  },
+  {
+    "title": "second comment",
+    "body": "this is my second comment",
+    "user_id": 2,
+    "game_id": 2
+  },
+  {
+    "title": "third comment",
+    "body": "this is my third comment",
+    "user_id": 1,
+    "game_id": 2
+  },
+  {
+    "title": "fourth comment",
+    "body": "this is my fourth comment",
+    "user_id": 2,
+    "game_id": 1
+  }
+]

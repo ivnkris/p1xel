@@ -1,0 +1,58 @@
+[
+  {
+    "name": "First Game Name",
+    "cover_art": "this would be some cover art link",
+    "screenshots": "['first link', 'second link', 'third link']",
+    "critic_rating": 6,
+    "total_rating": 60,
+    "is_multiplayer": true,
+    "release_date": 1614772499,
+    "platform": "PC",
+    "genre": "RPG",
+    "has_game": false,
+    "want_game": true,
+    "user_id": 1
+  },
+  {
+    "name": "Second Game Name",
+    "cover_art": "this would be some cover art link for the second game",
+    "screenshots": "['first link', 'second link', 'third link']",
+    "critic_rating": 8,
+    "total_rating": 80,
+    "is_multiplayer": false,
+    "release_date": 1612266899,
+    "platform": "PlayStation",
+    "genre": "RPG",
+    "has_game": true,
+    "want_game": false,
+    "user_id": 2
+  },
+  {
+    "name": "Third Game Name",
+    "cover_art": "this would be some cover art link for the third game",
+    "screenshots": "['first link', 'second link', 'third link']",
+    "critic_rating": 4,
+    "total_rating": 40,
+    "is_multiplayer": true,
+    "release_date": 1613377899,
+    "platform": "XBOX",
+    "genre": "FPS",
+    "has_game": false,
+    "want_game": false,
+    "user_id": 3
+  },
+  {
+    "name": "Fourth Game Name",
+    "cover_art": "this would be some cover art link for the fourth game",
+    "screenshots": "['first link', 'second link', 'third link']",
+    "critic_rating": 2,
+    "total_rating": 20,
+    "is_multiplayer": true,
+    "release_date": 1615580899,
+    "platform": "PC",
+    "genre": "Fighting",
+    "has_game": true,
+    "want_game": true,
+    "user_id": 1
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "steam_id": "1234567890",
+    "first_name": "first",
+    "last_name": "last",
+    "username": "myusername",
+    "email": "username@email.domain",
+    "password": "pass123",
+    "profile_picture": "random url",
+    "friends": "[1, 2, 3]"
+  },
+  {
+    "steam_id": "2345678901",
+    "first_name": "first222",
+    "last_name": "last222",
+    "username": "myusername222",
+    "email": "username222@email.domain",
+    "password": "pass123",
+    "profile_picture": ""
+  },
+  {
+    "steam_id": "3456789012",
+    "first_name": "first333",
+    "last_name": "last333",
+    "username": "myusername333",
+    "email": "username333@email.domain",
+    "password": "pass123",
+    "profile_picture": "random url 2",
+    "friends": "[1, 2, 4]"
+  },
+  {
+    "steam_id": "4567890123",
+    "first_name": "first444",
+    "last_name": "last444",
+    "username": "myusername444",
+    "email": "username444@email.domain",
+    "password": "pass123444",
+    "profile_picture": "random url 3"
+  }
+]
