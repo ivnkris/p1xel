@@ -1,5 +1,9 @@
 const { Router } = require("express");
 
-const deleteRouters = require("");
+const gamesRoutes = require("./gamesRoutes");
 
 const router = Router();
+
+router.use("/games", gamesRoutes);
+
+module.exports = router;
