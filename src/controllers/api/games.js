@@ -61,9 +61,10 @@ const addGame = async (req, res) => {
 
   try {
     const newGame = await Game.create(req.body);
-    res.status(200).json(newGame);
+
+    return res.status(200).json(newGame);
   } catch (error) {
-    res.status(500).json({ error: `Failed to post Game` });
+    return res.status(500).json({ error: `Failed to post Game` });
   }
 };
 
@@ -82,9 +83,10 @@ const updateGame = async (req, res) => {
         id: +req.params.id,
       },
     });
-    res.status(200).json(gameToBeUpdated);
+
+    return res.status(200).json(gameToBeUpdated);
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       error: `Failed to update Game with id of [${req.params.id}]`,
     });
   }
@@ -97,9 +99,10 @@ const deleteGame = async (req, res) => {
         id: +req.params.id,
       },
     });
-    res.json(gameToBeDeleted);
+
+    return res.json(gameToBeDeleted);
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       error: `Failed to delete Post with id of [${req.params.id}]`,
     });
   }
