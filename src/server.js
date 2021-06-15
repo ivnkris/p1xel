@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const handlebars = require("express-handlebars");
 const expressSession = require("express-session");
 const connectSessionSequelize = require("connect-session-sequelize")(
   expressSession.Store
@@ -21,6 +22,11 @@ const sessionOptions = {
   saveUninitialized: false,
   store: new connectSessionSequelize({ db: sequelize }),
 };
+
+const hbs = handlebars.create({});
+
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(cors());
 app.use(expressSession(sessionOptions));
