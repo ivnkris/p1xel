@@ -103,7 +103,7 @@ const deleteGame = async (req, res) => {
     return res.json(gameToBeDeleted);
   } catch (error) {
     return res.status(500).json({
-      error: `Failed to delete Post with id of [${req.params.id}]`,
+      error: `Failed to delete Game with id of [${req.params.id}]`,
     });
   }
 };
