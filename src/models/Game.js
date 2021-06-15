@@ -38,7 +38,7 @@ const schema = {
     allowNull: false,
   },
   is_multiplayer: {
-    type: DataTypes.BOOLEAN,
+    type: DataTypes.STRING,
     allowNull: false,
   },
   release_date: {
@@ -68,20 +68,6 @@ const schema = {
       key: "id",
     },
   },
-  // user_comment: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: "comment",
-  //     key: "id",
-  //   },
-  // },
-  // user_rating: {
-  //   type: DataTypes.INTEGER,
-  //   references: {
-  //     model: "rating",
-  //     key: "id",
-  //   },
-  // },
 };
 
 class Game extends Model {}

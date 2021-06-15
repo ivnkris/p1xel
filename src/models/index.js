@@ -48,14 +48,4 @@ Game.hasMany(Rating, {
   // onDelete: "CASCADE",
 });
 
-// Comment.hasOne(Rating, {
-//   foreignKey: "rating_id",
-//   // onDelete: "CASCADE",
-// });
-
-// Rating.hasOne(Comment, {
-//   foreignKey: "comment_id",
-//   // onDelete: "CASCADE",
-// });
-
 module.exports = { User, Game, Rating, Comment };
