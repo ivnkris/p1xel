@@ -1,5 +1,8 @@
 const renderLoginPage = (req, res) => {
-  res.render("login");
+  const options = {
+    layout: "login",
+  };
+  res.render("login", options);
 };
 
 module.exports = renderLoginPage;
