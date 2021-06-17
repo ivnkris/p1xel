@@ -1,0 +1,11 @@
+.carousel {
+  width: auto;
+  max-height: 374px;
+  overflow: hidden;
+}
+
+.d-block {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
