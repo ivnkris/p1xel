@@ -19,7 +19,7 @@ const handleSubmit = async (event) => {
     );
     console.log("Failed Login");
   } else {
-    window.location.replace("/dashboard");
+    window.location.replace("/user-profile");
   }
 
   console.log(req.session);
