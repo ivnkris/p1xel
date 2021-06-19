@@ -1,8 +1,12 @@
 const axios = require("axios");
 
-const getGameData = async () => {
+const getGameData = async (req, res) => {
+  const searchInput = req._parsedUrl.query;
+
+  console.log(searchInput);
+
   const data =
-    'fields name, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "Breath of the Wild";';
+    'fields name, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "Pokemon";';
   const config = {
     method: "post",
     url: "https://api.igdb.com/v4/games",
@@ -14,7 +18,8 @@ const getGameData = async () => {
     data: data,
   };
   const response = await axios(config);
-  console.log(response.data);
+  // console.log(response.data);
+  res.send(response.data);
 };
 
 module.exports = getGameData;
