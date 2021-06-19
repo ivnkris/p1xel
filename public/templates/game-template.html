@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="./assets/css/template2.css"
+      type="text/stylesheet"
+      rel="stylesheet"
+    />
+
+    <title>Mike is awesome</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img class="w-50" src="./assets/img/p1xel.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex w-75 m-2 p-2">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid row border border-success my-container m-0 p-1">
+      <!-- container 1 -->
+      <div class="col-lg-2 border border-danger col-sm-12">
+        <div class="text-center">
+          <div>
+            <button class="m-2">
+              <i class="fas fa-sign-in-alt fa-3x"></i>
+            </button>
+          </div>
+
+          <div>
+            <button class="m-2"><i class="fas fa-home fa-3x"></i></button>
+          </div>
+
+          <div>
+            <button class="m-2">
+              <i class="fas fa-gamepad fa-3x"></i>
+            </button>
+          </div>
+
+          <div>
+            <button class="m-2"><i class="fas fa-users fa-3x"></i></button>
+          </div>
+          <div>
+            <button class="m-2"><i class="fab fa-steam fa-3x"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- container 2 -->
+      <div class="col-lg-10 border border-danger col-sm-12">
+        <div class="row container m-2">
+          <!-- game cover art -->
+          <div class="col-lg-2 mt-4">
+            <img
+              src="./assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
+              alt=""
+              width="150px"
+            />
+          </div>
+          <!-- game description -->
+          <div class="col-lg-7 m-2">
+            <!-- game name -->
+            <div class="mt-2">
+              <h5>Game title</h5>
+              Cat attack
+            </div>
+            <!-- summary -->
+            <div class="mt-2">
+              <h5>Summary</h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil,
+              necessitatibus. Assumenda expedita eos vero dicta est sit, rem
+              quam veritatis quod nostrum et magni harum laboriosam dolores nemo
+              incidunt sequi.
+            </div>
+            <!-- platform/genre/release date -->
+            <div class="mt-2">
+              <h5>Platform/Genre/Release date</h5>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              nostrum fugiat hic, similique officiis laborum aspernatur quos
+              perferendis ut placeat, et voluptas. Consequuntur, laboriosam
+              architecto? Dolores placeat voluptas assumenda sit!
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/46321097-885E-44BA-9976-819DCD38DA1C.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/60F115F4-C2F7-41C7-A3CB-B8BD2B51A975.JPG"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- comments -->
+        <div class="row container m-2 mt-4">
+          <h4>Comments</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque totam
+          hic rerum eligendi voluptatem ducimus exercitationem beatae earum
+          ipsum, expedita sequi dolores neque sunt assumenda labore iusto
+          consequatur, ab laboriosam!
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
