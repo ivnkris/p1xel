@@ -2,6 +2,7 @@ const User = require("./User");
 const Game = require("./Game");
 const Rating = require("./Rating");
 const Comment = require("./Comment");
+const Followers = require("./Followers");
 
 Game.belongsTo(User, {
   foreignKey: "user_id",
@@ -53,4 +54,23 @@ Game.hasMany(Rating, {
   onDelete: "CASCADE",
 });
 
-module.exports = { User, Game, Rating, Comment };
+Followers.belongsTo(User, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(Followers, {
+  foreignKey: "user_id",
+  onDelete: "CASCADE",
+});
+
+Followers.belongsTo(User, {
+  foreignKey: "follower_id",
+  onDelete: "CASCADE",
+});
+
+User.hasMany(Followers, {
+  foreignKey: "follower_id",
+  onDelete: "CASCADE",
+}),
+  (module.exports = { User, Game, Rating, Comment, Followers });
