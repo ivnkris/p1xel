@@ -17,6 +17,17 @@ const getAllFollowers = async (req, res) => {
   }
 };
 
+const followNewUser = async (req, res) => {
+  try {
+    const newFollower = await Followers.create(req.body);
+    return res.status(200).json(newFollower);
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to follow User." });
+  }
+};
+
 module.exports = {
   getAllFollowers,
+  followNewUser,
 };
