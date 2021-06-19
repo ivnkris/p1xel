@@ -1,5 +1,8 @@
 const renderSearchResults = (req, res) => {
-  res.render("searchResults");
+  const options = {
+    layout: "main",
+  };
+  res.render("searchResults", options);
 };
 
 module.exports = renderSearchResults;
