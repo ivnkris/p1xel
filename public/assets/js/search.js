@@ -5,7 +5,7 @@ const getGameData = async (event) => {
     const searchInput = $("#search-form").val();
     console.log(searchInput);
 
-    const response = await fetch(`/api/external-data/igdb?${searchInput}`);
+    const response = await fetch(`/public-api/igdb?${searchInput}`);
 
     const data = await response.json();
 

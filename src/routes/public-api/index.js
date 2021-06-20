@@ -1,6 +1,6 @@
 const { Router } = require("express");
 
-const getIgdbData = require("../../controllers/api/igdbData");
+const getIgdbData = require("../../controllers/public-api/igdbData");
 
 const router = Router();
 
