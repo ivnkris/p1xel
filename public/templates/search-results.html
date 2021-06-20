@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="../assets/css/game-page.css"
+      type="text/stylesheet"
+      rel="stylesheet"
+    />
+
+    <title>Game | P1xel</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img class="w-50" src="../assets/img/p1xel.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex w-75 m-2 p-2">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid row my-container m-0 p-1">
+      <!-- container 1 -->
+      <div class="col-lg-2 col-sm-12 d-flex justify-content-center">
+        <div class="text-center d-flex flex-lg-column flex-md-row mt-2">
+          <div class="mx-2 my-4">
+            <a href="#">
+              <i class="fas fa-sign-in-alt fa-3x" style="color: #00793e"></i>
+            </a>
+          </div>
+
+          <div class="mx-1 my-3">
+            <a href="#"
+              ><i class="fas fa-home fa-3x" style="color: #00793e"></i
+            ></a>
+          </div>
+
+          <div class="mx-1 my-3">
+            <a href="#">
+              <i class="fas fa-gamepad fa-3x" style="color: #00793e"></i>
+            </a>
+          </div>
+
+          <div class="mx-1 my-3">
+            <a href="#"
+              ><i class="fas fa-users fa-3x" style="color: #00793e"></i
+            ></a>
+          </div>
+          <div class="mx-1 my-3">
+            <a href="#"
+              ><i class="fab fa-steam fa-3x" style="color: #00793e"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- container 2 -->
+      <div
+        class="
+          col-lg-10
+          d-flex
+          justify-content-center
+          flex-column
+          col-sm-12
+          border border-danger
+        "
+      >
+        <div
+          class="
+            container
+            d-flex
+            flex-wrap flex-lg-row flex-sm-column
+            justify-content-around
+            mt-3
+          "
+        >
+          <h5>Advanced Search:</h5>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Platform
+            </button>
+            <form class="dropdown-menu p-4">
+              <div class="mb-3">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    PS4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    PS5
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    XBOX
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    PC
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Genre
+            </button>
+            <form class="dropdown-menu p-4">
+              <div class="mb-3">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Platform
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Horror
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Sim Racing
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Puzzle
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Rating
+            </button>
+            <form class="dropdown-menu p-4">
+              <div class="mb-3">
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Over 80%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    60% - 80%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    40% - 60%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    20% - 40%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="dropdownCheck2"
+                  />
+                  <label class="form-check-label" for="dropdownCheck2">
+                    Under 20%
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Release Dates
+            </button>
+            <form class="dropdown-menu p-4">
+              <div>From:</div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleDropdownFormEmail2"
+                  placeholder="Enter Year"
+                />
+              </div>
+              <div>To:</div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleDropdownFormEmail2"
+                  placeholder="Enter Year"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="
+            container
+            d-flex
+            flex-wrap flex-lg-row flex-sm-column
+            justify-content-around
+            mt-3
+          "
+        >
+          <div class="card mt-3" style="width: 18rem">
+            <img
+              src="../assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Game Name</h5>
+              <p class="card-text">Game Summary</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Platform:</li>
+              <li class="list-group-item">Rating:</li>
+              <li class="list-group-item">Release Date:?</li>
+            </ul>
+
+            <div class="card-body">
+              <a href="#" class="card-link">Want To Play</a>
+              <a href="#" class="card-link">Have Played</a>
+            </div>
+          </div>
+
+          <div class="card mt-3" style="width: 18rem">
+            <img
+              src="../assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Game Name</h5>
+              <p class="card-text">Game Summary</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Platform:</li>
+              <li class="list-group-item">Rating:</li>
+              <li class="list-group-item">Release Date:?</li>
+            </ul>
+
+            <div class="card-body">
+              <a href="#" class="card-link">Want To Play</a>
+              <a href="#" class="card-link">Have Played</a>
+            </div>
+          </div>
+
+          <div class="card mt-3" style="width: 18rem">
+            <img
+              src="../assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Game Name</h5>
+              <p class="card-text">Game Summary</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Platform:</li>
+              <li class="list-group-item">Rating:</li>
+              <li class="list-group-item">Release Date:?</li>
+            </ul>
+
+            <div class="card-body">
+              <a href="#" class="card-link">Want To Play</a>
+              <a href="#" class="card-link">Have Played</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
