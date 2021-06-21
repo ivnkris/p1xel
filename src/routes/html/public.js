@@ -14,7 +14,7 @@ router.get("/login", renderLoginPage);
 router.get("/team", renderTeamPage);
 router.get("/signup", renderSignupPage);
 router.get("/game/:id", renderGamePage);
-router.get("/searchResults", renderSearchResults);
+router.get("/search-results", renderSearchResults);
 router.get("/404", render404);
 router.get("/", renderHomePage);
 

@@ -19,7 +19,16 @@ const getGameData = async (req, res) => {
     data: data,
   };
   const response = await axios(config);
-  res.send(response.data);
+
+  // axios(config)
+  //   .then((res) => console.log(res, "1"))
+  //   .catch((err) => console.log(err));
+
+  console.log(response, "2");
+
+  // const results = response.data;
+
+  res.json(response.data);
 };
 
 module.exports = getGameData;
