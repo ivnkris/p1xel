@@ -1,7 +1,27 @@
+const axios = require("axios");
 const { Game, User } = require("../../models");
 
 const renderHomePage = async (req, res) => {
   try {
+    const data = `fields name,rating, cover.url;
+    sort rating desc;
+    where rating != null;`;
+    const config = {
+      method: "post",
+      url: "https://api.igdb.com/v4/games",
+      headers: {
+        "Client-ID": "zgvole5aqniz8rnu55rvoxmw3h8d8x",
+        Authorization: "Bearer zzrepo6q4zb5jvw5jxqswmpgc6ef0s",
+        "Content-Type": "application/json",
+      },
+      data: data,
+    };
+    const response = await axios(config);
+
+    const topResults = response.data;
+
+    console.log(topResults);
+
     if (req.session.isLoggedIn) {
       const gameData = await Game.findAll({
         where: {
@@ -13,19 +33,23 @@ const renderHomePage = async (req, res) => {
           id: req.session.userId,
         },
       });
+
       const formattedGameData = gameData.map((game) =>
         game.get({ plain: true })
       );
+
       const formattedUserData = userData.map((user) =>
         user.get({ plain: true })
       );
+
       const dataObject = {
         gameData: formattedGameData,
         userData: formattedUserData,
+        topResults,
       };
-      return res.render("homepage", { homepageData: dataObject });
+      return res.render("homepage", dataObject);
     } else {
-      return res.render("homepage");
+      return res.render("homepage", { topResults });
     }
   } catch (error) {
     console.log(`[ERROR] - ${error.message}`);
