@@ -1,0 +1,7 @@
+.hover-image {
+  color: green !important;
+}
+
+.hover-image :hover {
+  color: red;
+}
