@@ -1,1 +1,36 @@
-<h1>Compare Page</h1>
+<div class="container-fluid row my-container m-0 p-1">
+      <!-- container 1 -->
+      <div class="col-lg-2 col-sm-12 d-flex justify-content-center">
+        {{> private-navbar}}
+      </div>
+
+      <!-- container 2 -->
+      <div
+        class="col-lg-10 d-flex justify-content-around flex-row col-sm-12 row"
+      >
+        <div class="col-5 d-flex justify-content-around flex-column">
+          <ul class="card list-group list-group-flush text-center">
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+            <li class="list-group-item">
+              <a href="#" class="btn btn-warning">Link to Steam</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-5 d-flex justify-content-around flex-column">
+          <ul class="card list-group list-group-flush text-center">
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+              {{> compare-item}}
+            <li class="list-group-item">
+              <a href="#" class="btn btn-warning">Link to Steam</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
