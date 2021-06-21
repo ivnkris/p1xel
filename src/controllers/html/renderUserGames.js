@@ -1,5 +1,5 @@
 const renderUserGames = (req, res) => {
-  res.render("userGames");
+  res.render("user-games");
 };
 
 module.exports = renderUserGames;

@@ -1,5 +1,5 @@
 const renderUserProfile = (req, res) => {
-  res.render("userProfile");
+  res.render("user-profile");
 };
 
 module.exports = renderUserProfile;
