@@ -10,7 +10,7 @@ const renderSearchResults = async (req, res) => {
 
   console.log(stringifySearch);
 
-  const data = `fields name, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
+  const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
   const config = {
     method: "post",
     url: "https://api.igdb.com/v4/games",
@@ -23,16 +23,9 @@ const renderSearchResults = async (req, res) => {
   };
   const response = await axios(config);
 
-  // axios(config)
-  //   .then((res) => console.log(res, "1"))
-  //   .catch((err) => console.log(err));
-
-  console.log(response, "2");
-
   const results = response.data;
 
-  // res.json(response.data);
-  res.render("searchResults", { results });
+  res.render("search-results", { options, results });
 };
 
 module.exports = renderSearchResults;

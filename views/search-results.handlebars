@@ -221,23 +221,9 @@
       class="container d-flex flex-wrap flex-lg-row flex-sm-column justify-content-around mt-3"
     >
 
-<h1>Search Results</h1>
-
 {{#each results as |result|}}
-  <h1>{{name}}</h1>
-  <h1>{{cover.url}}</h1>
-
+  {{> game-card}}
 {{/each}}
-
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
-      {{> game-card}}
     </div>
   </div>
 </div>

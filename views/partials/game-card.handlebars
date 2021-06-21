@@ -1,17 +1,13 @@
 <div class="card mt-3" style="width: 18rem">
-  <img
-    src="../assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
-    class="card-img-top"
-    alt="..."
-  />
+  <img src="http:{{cover.url}}" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">Game Name</h5>
-    <p class="card-text">Game Summary</p>
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{summary}}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Platform:</li>
-    <li class="list-group-item">Rating:</li>
-    <li class="list-group-item">Release Date:?</li>
+    <li class="list-group-item">Platform: {{platforms.0.name}}</li>
+    <li class="list-group-item">Rating: {{rating}}</li>
+    <li class="list-group-item">Release Date: {{release_dates.0.date}}</li>
   </ul>
 
   <div class="card-body">
