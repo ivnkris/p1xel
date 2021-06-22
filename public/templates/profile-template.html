@@ -59,41 +59,43 @@
 
     <div class="container-fluid row my-container m-0 p-1">
       <!-- container 1 -->
-      <div class="col-lg-2 col-sm-12 d-flex justify-content-center flex-column">
-        <div class="col-lg-2 col-sm-12 d-flex align-self-center">
-          <div class="text-center d-flex flex-lg-column flex-md-row mt-2">
-            <div class="mx-2 my-4">
-              <a href="#">
-                <i class="fas fa-home fa-3x" title="Home"></i>
-              </a>
-            </div>
-  
-            <div class="mx-2 my-4">
-              <a href="#"
-                ><i class="fas fa-chalkboard fa-3x" title="Dashboard"></i
-              ></a>
-            </div>
-  
-            <div class="mx-2 my-4">
-              <a href="#">
-                <i class="fas fa-gamepad fa-3x" title="My Games"></i>
-              </a>
-            </div>
-  
-            <div class="mx-2 my-4">
-              <a href="#"
-                ><i class="fas fa-users fa-3x" title="My Followers"></i
-              ></a>
-            </div>
-  
-            <div class="mx-2 my-4">
-              <a href="#"
-                ><i class="fas fa-sign-out-alt fa-3x" title="Log Out"></i
-              ></a>
-            </div>
+
+      <div class="col-lg-2 col-sm-12 d-flex justify-content-center">
+        <div class="text-center d-flex flex-lg-column flex-md-row mt-2">
+          <div class="mx-2 my-4">
+            <a href="#">
+              <i class="fas fa-home fa-3x" title="Home"></i>
+            </a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-chalkboard fa-3x" title="Dashboard"></i
+            ></a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#">
+              <i class="fas fa-gamepad fa-3x" title="My Games"></i>
+            </a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-users fa-3x" title="My Followers"></i
+            ></a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-sign-out-alt fa-3x" title="Log Out"></i
+            ></a>
           </div>
         </div>
+      </div>
 
+      <!-- <div class="col-lg-2 col-sm-12 d-flex justify-content-center flex-column">        
+        
         <div class="mt-5">
           <h4>Steam info:</h4>
           <ul class="text-center">
@@ -104,7 +106,7 @@
             <li><a href="#">Steam friends</a></li>
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <!-- container 2 -->
       <div class="col-lg-8 col-sm-12">
@@ -112,7 +114,7 @@
         <div class="row container m-2 p-2">
           <div class="col col-lg-4 col-md-12">
             <img
-              src="../assets/img/profile img.png"
+              src="../assets/img/profile_img.png"
               alt="profile picture"
               width="200px"
               height="auto"
@@ -129,12 +131,70 @@
         </div>
 
         <!-- latest user updates -->
-        <div class="row container m-2">
-          <div class="col col-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-            nesciunt quaerat laboriosam facilis vitae, dolorem accusantium illum
-            molestiae eum quis, debitis enim atque, et aspernatur accusamus vel
-            iusto dolorum suscipit!
+        <div class="row container m-2 border border-danger d-flex justify-content-around">
+          <!-- Steam Profile Info -->
+          <div class="col col-12 row border border-success">
+            <div class="col-6 text-center">
+              <img src="../assets/img/profile_img.png" alt="steam profile img" width="100px" height="auto">
+            </div>
+            <div class="col-6 text-center">
+              <div><a href="#">View my profile on Steam</a></div>
+            </div>
+          </div>
+          <!-- Recently PLayed Games -->
+          <div class="col col-12 row border border-success d-flex justify-content-around">
+            <div class="card mt-3" style="width: 18rem">
+              <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/1080110/3493064468f3bd8b9d7bb4b44f873205985de227.jpg" class="card-img-top" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title">Game Name</h5>
+                <p class="card-text">Play time in last 2 wks</p>
+                <p class="card-text">Play time total</p>
+              </div>
+            </div>
+
+            <div class="card mt-3" style="width: 18rem">
+              <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/1080110/3493064468f3bd8b9d7bb4b44f873205985de227.jpg" class="card-img-top" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title">Game Name</h5>
+                <p class="card-text">Play time in last 2 wks</p>
+                <p class="card-text">Play time total</p>
+              </div>
+            </div>
+
+            <div class="card mt-3" style="width: 18rem">
+              <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/1080110/3493064468f3bd8b9d7bb4b44f873205985de227.jpg" class="card-img-top" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title">Game Name</h5>
+                <p class="card-text">Play time in last 2 wks</p>
+                <p class="card-text">Play time total</p>
+              </div>
+            </div>
+
+            <div class="card mt-3" style="width: 18rem">
+              <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/1080110/3493064468f3bd8b9d7bb4b44f873205985de227.jpg" class="card-img-top" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title">Game Name</h5>
+                <p class="card-text">Play time in last 2 wks</p>
+                <p class="card-text">Play time total</p>
+              </div>
+            </div>
+            
+          </div>
+          <!-- steam friends -->
+          <div class="col col-12 row border border-success d-flex justify-content-around">
+            <!-- make a call to get the friends list then make a call for each friend to retrieve their data. profile photo and link to their steam account  -->
+            <div class="card mt-3" style="width: 14rem">
+            <!-- img from second api call -->
+              <img src="../assets/img/profile_img.png" class="card-img-top" alt="..."/>
+              <div class="card-body">
+                <h5 class="card-title">Friend name</h5>
+                <p class="card-text">Friend since</p>
+                <p class="card-text">View on Steam</p>
+              </div>
           </div>
         </div>
       </div>
