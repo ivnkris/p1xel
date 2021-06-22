@@ -2,7 +2,7 @@ const STEAM_API_KEY = "B56468BAD7D8396DF9B20F6148A9080D";
 const axios = require("axios");
 
 const renderComparePage = async (req, res) => {
-  const { profilePicture, steamUsername } = req.session;
+  const { steamUsername } = req.session;
 
   const options = {
     layout: "main",
@@ -15,8 +15,7 @@ const renderComparePage = async (req, res) => {
     };
 
     const response = await axios(config);
-    const results = response;
-    console.log(results);
+    const results = response.data.playerstats.achievements;
     return results;
   };
 
@@ -25,6 +24,7 @@ const renderComparePage = async (req, res) => {
   const data = {
     userData,
   };
+
   res.render("compare-page", { options, data });
 };
 

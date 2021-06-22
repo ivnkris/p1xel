@@ -17,4 +17,16 @@ module.exports = {
       return moment(date).format("DD/MM/YYYY");
     }
   },
+  checkIfAchievement: (achievement) => {
+    if (achievement === 1) {
+      return true;
+    } else if (achievement === 0) {
+      return false;
+    }
+  },
+  changeUnderscoreToSpace: (achievement) => {
+    if (achievement) {
+      return achievement.split("_").join(" ");
+    }
+  },
 };

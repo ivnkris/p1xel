@@ -60,9 +60,6 @@ const renderUserProfile = async (req, res) => {
     userFriendsList: await getFriendsList(),
   };
 
-  console.log(data);
-  console.log(data.userFriendsList);
-
   res.render("user-profile", { options, data });
 };
 
