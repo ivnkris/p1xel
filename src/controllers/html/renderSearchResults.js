@@ -24,9 +24,6 @@ const renderSearchResults = async (req, res) => {
     const response = await axios(config);
 
     const results = response.data;
-    // console.log(results);
-
-    console.log(typeof results[0].cover.url);
 
     return res.render("search-results", { options, results });
   } else {
