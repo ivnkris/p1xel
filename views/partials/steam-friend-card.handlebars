@@ -1,10 +1,10 @@
-            <!-- make a call to get the friends list then make a call for each friend to retrieve their data. profile photo and link to their steam account  -->
-            <div class="card mt-3" style="width: 14rem">
-            <!-- img from second api call -->
-              <img src="../assets/img/profile_img.png" class="card-img-top" alt="..."/>
-              <div class="card-body">
-                <h5 class="card-title">Friend name</h5>
-                <p class="card-text">Friend since</p>
-                <p class="card-text">View on Steam</p>
-              </div>
-              </div>
+<!-- make a call to get the friends list then make a call for each friend to retrieve their data. profile photo and link to their steam account  -->
+<div class="card mt-3" style="width: 14rem">
+  <!-- img from second api call -->
+  <img src={{avatarfull}} class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{personaname}}</h5>
+    <p class="card-text"><a href={{profileurl}} target="_blank">View on Steam</a></p>
+    <p class="card-text">Country: {{loccountrycode}}</p>
+  </div>
+</div>

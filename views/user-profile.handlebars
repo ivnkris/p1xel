@@ -44,11 +44,11 @@
           </div>
           <!-- steam friends -->
           <div class="col col-12 row d-flex justify-content-around my-3">
+            
+            {{#each data.userFriendsList.friendsProfiles as |friend|}}
             {{> steam-friend-card}}
-            {{> steam-friend-card}}
-            {{> steam-friend-card}}
-            {{> steam-friend-card}}
-            {{> steam-friend-card}}
+            {{/each}}
+          
 
           </div>
         </div>
