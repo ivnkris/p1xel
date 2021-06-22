@@ -24,13 +24,35 @@
           </div>
         </div>
 
-        <!-- latest user updates -->
-        <div class="row container m-2">
-          <div class="col col-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-            nesciunt quaerat laboriosam facilis vitae, dolorem accusantium illum
-            molestiae eum quis, debitis enim atque, et aspernatur accusamus vel
-            iusto dolorum suscipit!
+<!-- latest user updates -->
+        <div class="row container m-2 border border-danger d-flex justify-content-around">
+          <!-- Steam Profile Info -->
+          <div class="col col-12 row border border-success">
+            <div class="col-6 text-center">
+              <img src="../assets/img/profile_img.png" alt="steam profile img" width="100px" height="auto">
+            </div>
+            <div class="col-6 text-center">
+              <div><a href="#">View my profile on Steam</a></div>
+            </div>
+          </div>
+          <!-- Recently PLayed Games -->
+          <div class="col col-12 row border border-success d-flex justify-content-around">
+            
+            {{> steam-game-card}}
+
+            {{> steam-game-card}}
+            {{> steam-game-card}}
+            {{> steam-game-card}}
+
+          </div>
+          <!-- steam friends -->
+          <div class="col col-12 row border border-success d-flex justify-content-around">
+            {{> steam-friend-card}}
+            {{> steam-friend-card}}
+            {{> steam-friend-card}}
+            {{> steam-friend-card}}
+            {{> steam-friend-card}}
+
           </div>
         </div>
       </div>
