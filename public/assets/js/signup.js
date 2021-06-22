@@ -43,8 +43,6 @@ const handleSubmit = async (event) => {
   } else {
     $("#signup-alert").text("Your passwords do not match!");
   }
-
-  console.log("hi");
 };
 
 $("#submit-signup").submit(handleSubmit);

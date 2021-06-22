@@ -8,7 +8,6 @@ const renderSearchResults = async (req, res) => {
 
   const stringifySearch = decodeURI(searchInput);
 
-  console.log(stringifySearch);
   if (searchInput) {
     const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
     const config = {
