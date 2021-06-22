@@ -25,28 +25,25 @@
         </div>
 
 <!-- latest user updates -->
-        <div class="row container m-2 border border-danger d-flex justify-content-around">
+        <div class="row container m-2 d-flex justify-content-around my-5">
           <!-- Steam Profile Info -->
-          <div class="col col-12 row border border-success">
-            <div class="col-6 text-center">
-              <img src="../assets/img/profile_img.png" alt="steam profile img" width="100px" height="auto">
-            </div>
-            <div class="col-6 text-center">
-              <div><a href="#">View my profile on Steam</a></div>
+          <div class="col col-12 row my-3">
+            <div class="col-12 text-center">
+              <img src={{data.userData.avatarmedium}} alt="steam profile img" width="100px" height="auto">
+              <div class="m-2">{{data.userData.personaname}}</div>
+              <div class="m-2"><a href={{data.userData.profileurl}} target="_blank">View my profile on Steam</a></div>
+              <div class="m-2">Previous Login: <span>{{formattedDate data.userData.lastlogoff}}</span></div>
             </div>
           </div>
           <!-- Recently PLayed Games -->
-          <div class="col col-12 row border border-success d-flex justify-content-around">
-            
+          <div class="col col-12 row d-flex justify-content-around my-3">
+            {{#each data.userPlayedGames as |game|}}
             {{> steam-game-card}}
-
-            {{> steam-game-card}}
-            {{> steam-game-card}}
-            {{> steam-game-card}}
+            {{/each}}
 
           </div>
           <!-- steam friends -->
-          <div class="col col-12 row border border-success d-flex justify-content-around">
+          <div class="col col-12 row d-flex justify-content-around my-3">
             {{> steam-friend-card}}
             {{> steam-friend-card}}
             {{> steam-friend-card}}

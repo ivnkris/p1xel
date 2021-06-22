@@ -18,7 +18,7 @@ const renderSearchResults = async (req, res) => {
         Authorization: "Bearer zzrepo6q4zb5jvw5jxqswmpgc6ef0s",
         "Content-Type": "application/json",
       },
-      data: data,
+      data,
     };
     const response = await axios(config);
 

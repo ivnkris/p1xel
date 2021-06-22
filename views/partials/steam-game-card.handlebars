@@ -1,9 +1,9 @@
             <div class="card mt-3" style="width: 18rem">
               <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
-              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/1080110/3493064468f3bd8b9d7bb4b44f873205985de227.jpg" class="card-img-top" alt="..."/>
+              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{appid}}/{{img_logo_url}}.jpg" class="card-img-top" alt="..."/>
               <div class="card-body">
-                <h5 class="card-title">Game Name</h5>
-                <p class="card-text">Play time in last 2 wks</p>
-                <p class="card-text">Play time total</p>
+                <h5 class="card-title">{{name}}</h5>
+                <p class="card-text">Play time in last 2 weeks <span>{{playtime_2weeks}} minutes</span></p>
+                <p class="card-text">Play time {{playtime_forever}} minutes</p>
               </div>
             </div>
