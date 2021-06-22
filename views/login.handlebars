@@ -1,24 +1,36 @@
-<div class="position-absolute top-50 start-50 translate-middle">
-  <form id="submit-login">
-    <div class="mb-3">
-      <input
-        type="email"
-        class="form-control"
-        id="email"
-        placeholder="Email Address"
-      />
-    </div>
-    <div class="mb-3">
-      <input
-        type="password"
-        class="form-control"
-        id="password"
-        placeholder="Password"
-      />
-    </div>
-    <div class="d-grid gap-2">
-      <button type="submit" class="btn btn-primary">Log In</button>
-    </div>
-  </form>
-  <div class="text-danger fw-bold mx-2 my-3" id="login-alert"></div>
+<div class="container-fluid row my-container m-0 p-1">
+  <!-- container 1 -->
+  {{> public-navbar}}
+
+  <!-- container 2 -->
+  <div class="col-lg-10 text-center col-sm-12">
+    
+        <div class="position-absolute top-50 start-50 translate-middle w-50">
+          <h4>Please Enter Your Login Credentials</h4>
+          <form class="mt-2" id="submit-login">
+            <div class="mb-3 w-100">
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Email Address"
+              />
+            </div>
+            <div class="mb-3 w-100">
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-outline-success">Log In</button>
+            </div>
+          </form>
+          <div class="text-danger fw-bold mx-2 my-3" id="login-alert">
+          </div>
+          <a  class="text-success fw-bold mx-2 my-3" href="/signup">Sign up here!</a>
+        </div>
+  </div>
 </div>
