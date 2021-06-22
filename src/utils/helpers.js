@@ -14,7 +14,7 @@ module.exports = {
   formattedDate: (date) => {
     if (date) {
       date = date * 1000;
-      return moment(date).format("DD MM YYYY");
+      return moment(date).format("DD/MM/YYYY");
     }
   },
 };
