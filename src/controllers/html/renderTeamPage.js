@@ -1,5 +1,5 @@
 const renderTeamPage = (req, res) => {
-  res.render("teampage");
+  res.render("team-page");
 };
 
 module.exports = renderTeamPage;

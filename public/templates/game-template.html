@@ -1,6 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      href="../assets/css/style.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+
+    <title>Game | P1xel</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img class="w-50" src="../assets/img/p1xel.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex w-75 m-2 p-2">
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
     <div class="container-fluid row my-container m-0 p-1">
       <!-- container 1 -->
-      {{> private-navbar}}
+      <div class="col-lg-2 col-sm-12 d-flex justify-content-center">
+        <div class="text-center d-flex flex-lg-column flex-md-row mt-2">
+          <div class="mx-2 my-4">
+            <a href="#">
+              <i class="fas fa-home fa-3x" title="Home"></i>
+            </a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-chalkboard fa-3x" title="Dashboard"></i
+            ></a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#">
+              <i class="fas fa-gamepad fa-3x" title="My Games"></i>
+            </a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-users fa-3x" title="My Followers"></i
+            ></a>
+          </div>
+
+          <div class="mx-2 my-4">
+            <a href="#"
+              ><i class="fas fa-sign-out-alt fa-3x" title="Log Out"></i
+            ></a>
+          </div>
+        </div>
+      </div>
 
       <!-- container 2 -->
       <div
@@ -119,6 +210,20 @@
           </div>
         </div>
         <!-- comments -->
-        {{> comments}}
+        <div class="row container m-2 mt-4">
+          <h4>Comments</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque totam
+          hic rerum eligendi voluptatem ducimus exercitationem beatae earum
+          ipsum, expedita sequi dolores neque sunt assumenda labore iusto
+          consequatur, ab laboriosam!
+        </div>
       </div>
     </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

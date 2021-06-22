@@ -1,5 +1,5 @@
 const renderComparePage = (req, res) => {
-  res.render("comparePage");
+  res.render("compare-page");
 };
 
 module.exports = renderComparePage;

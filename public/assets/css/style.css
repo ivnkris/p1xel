@@ -1,3 +1,8 @@
+:root {
+  --dark-green: #00793e;
+  --light-green: #ccffbd;
+}
+
 .carousel {
   width: auto;
   max-height: 374px;
@@ -8,4 +13,12 @@
   width: 50%;
   height: auto;
   margin: auto;
+}
+
+a {
+  color: var(--dark-green) !important;
+}
+
+a:hover {
+  color: var(--light-green) !important;
 }

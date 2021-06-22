@@ -1,5 +1,5 @@
 const renderFriendsList = (req, res) => {
-  res.render("friendsList");
+  res.render("followers");
 };
 
 module.exports = renderFriendsList;
