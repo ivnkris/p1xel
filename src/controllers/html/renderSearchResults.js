@@ -25,6 +25,10 @@ const renderSearchResults = async (req, res) => {
     const results = response.data;
 
     if (results.length > 0) {
+      results.forEach((each) => {
+        each.userId = req.session.userId;
+      });
+
       return res.render("search-results", { options, results });
     } else {
       results.emptySearch = true;

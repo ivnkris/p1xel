@@ -1,7 +1,8 @@
-<form name="game-form" id={{id}}>
+<form name="game-form" id={{id}} data-user={{userId}}>
   <div class="card mt-3" style="width: 18rem">
     <img
       id="cover"
+      data-type="http:{{formatIgdbUrl cover.url}}"
       src="http:{{formatIgdbUrl cover.url}}"
       class="card-img-top"
       alt="..."
@@ -11,9 +12,28 @@
       <p id="summary" class="card-text">{{trimSummary summary}}</p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Platform: {{platforms.0.name}}</li>
-      <li class="list-group-item">Rating: {{formatRatings rating}}</li>
-      <li class="list-group-item">Release Date:
+      <li
+        class="list-group-item"
+        id="platform"
+        data-type="{{platforms.0.name}}"
+      >
+        Platform:
+        {{platforms.0.name}}</li>
+
+      <li
+        class="list-group-item"
+        id="criticRating"
+        data-type="{{formatRatings rating}}"
+      >
+        Rating:
+        {{formatRatings rating}}</li>
+
+      <li
+        class="list-group-item"
+        id="releaseDate"
+        data-type="{{release_dates.0.date}}"
+      >
+        Release Date:
         {{formattedDate release_dates.0.date}}</li>
     </ul>
 

@@ -60,6 +60,7 @@ const addGame = async (req, res) => {
 } */
 
   try {
+    console.log(req.body)
     const newGame = await Game.create(req.body);
 
     return res.status(200).json(newGame);
