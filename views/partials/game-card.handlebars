@@ -1,4 +1,4 @@
-<form name="game-form" id={{id}}>
+<form name="game-form" id={{id}} data-user={{userId}}>
   <div class="card mt-3" style="width: 18rem">
     <img
       id="cover"
@@ -9,7 +9,7 @@
     />
     <div class="card-body">
       <h5 id="gameName" class="card-title">{{name}}</h5>
-      <p id="summary" class="card-text">{{summary}}</p>
+      <p id="summary" class="card-text">{{trimSummary summary}}</p>
     </div>
     <ul class="list-group list-group-flush">
       <li
@@ -34,12 +34,6 @@
         data-type="{{release_dates.0.date}}"
       >
         Release Date:
-      <p id="summary" class="card-text">{{trimSummary summary}}</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Platform: {{platforms.0.name}}</li>
-      <li class="list-group-item">Rating: {{formatRatings rating}}</li>
-      <li class="list-group-item">Release Date:
         {{formattedDate release_dates.0.date}}</li>
     </ul>
 

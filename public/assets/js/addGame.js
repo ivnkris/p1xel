@@ -17,6 +17,7 @@ const onSubmit = async (event) => {
   const platform = form.find("#platform").attr("data-type");
   const critic_rating = form.find("#criticRating").attr("data-type");
   const release_date = form.find("#releaseDate").attr("data-type");
+  const user_id = parseInt(form[0].dataset.user);
 
   const options = {
     method: "POST",
@@ -32,6 +33,7 @@ const onSubmit = async (event) => {
       platform,
       critic_rating,
       release_date,
+      user_id,
     }),
   };
   const response = await fetch(`/api/games/`, options);
