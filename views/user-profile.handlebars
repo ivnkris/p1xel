@@ -60,42 +60,11 @@
 
       <!-- container 3 -->
       <div class="col col-lg-2 col-md-12">
-        <h4>Friends List</h4>
+        <h4>Followers List</h4>
         <div class="list-group">
-          <button
-            type="button"
-            class="list-group-item list-group-item-action active text-center"
-            aria-current="true"
-          >
-            friend 1
-          </button>
-          <button
-            type="button"
-            class="
-              list-group-item list-group-item-action
-              text-center text-center
-            "
-          >
-            friend 2
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            friend 3
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            friend 4
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            friend 5
-          </button>
+          {{#each data.userFollowers as |follower|}}
+          {{> follower-card}}
+          {{/each}}
         </div>
       </div>
     </div>
