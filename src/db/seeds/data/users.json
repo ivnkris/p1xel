@@ -1,6 +1,6 @@
 [
   {
-    "steam_id": "1234567890",
+    "steam_id": "76561199111638466",
     "first_name": "first",
     "last_name": "last",
     "username": "myusername",
@@ -35,6 +35,14 @@
     "username": "myusername444",
     "email": "username444@email.domain",
     "password": "pass123444",
+    "profile_picture": "random url 3"
+  },
+  {
+    "first_name": "first555",
+    "last_name": "last555",
+    "username": "myusername555",
+    "email": "username555@email.domain",
+    "password": "pass125",
     "profile_picture": "random url 3"
   }
 ]
