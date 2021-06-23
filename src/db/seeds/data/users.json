@@ -36,5 +36,13 @@
     "email": "username444@email.domain",
     "password": "pass123444",
     "profile_picture": "random url 3"
+  },
+  {
+    "first_name": "first555",
+    "last_name": "last555",
+    "username": "myusername555",
+    "email": "username555@email.domain",
+    "password": "pass125",
+    "profile_picture": "random url 3"
   }
 ]

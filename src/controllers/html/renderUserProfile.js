@@ -54,13 +54,16 @@ const renderUserProfile = async (req, res) => {
     return { friendsProfiles, userFriendsSince: results };
   };
 
-  const data = {
-    userData: await getUserData(),
-    userPlayedGames: await getRecentlyPlayedGames(),
-    userFriendsList: await getFriendsList(),
-  };
-
-  res.render("user-profile", { options, data });
+  if (steamUsername) {
+    const data = {
+      userData: await getUserData(),
+      userPlayedGames: await getRecentlyPlayedGames(),
+      userFriendsList: await getFriendsList(),
+    };
+    res.render("user-profile", { options, data });
+  } else {
+    res.render("user-profile");
+  }
 };
 
 module.exports = renderUserProfile;
