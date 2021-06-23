@@ -220,10 +220,13 @@
     <div
       class="container d-flex flex-wrap flex-lg-row flex-sm-column justify-content-around mt-3"
     >
-
+{{#if results.emptySearch}}
+{{> empty-search}}
+{{else}}
 {{#each results as |result|}}
   {{> game-card}}
 {{/each}}
+{{/if}}
     </div>
   </div>
 </div>
