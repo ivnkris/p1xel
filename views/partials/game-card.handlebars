@@ -1,19 +1,35 @@
 <form name="game-form" id={{id}}>
-<div class="card mt-3" style="width: 18rem">
-  <img id="cover" src="http:{{formatIgdbUrl cover.url}}" class="card-img-top" alt="..." />
-  <div class="card-body">
-    <h5 id ="gameName" class="card-title">{{name}}</h5>
-    <p id="summary" class="card-text">{{summary}}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li id="platform" class="list-group-item">Platform: {{platforms.0.name}}</li>
-    <li id="criticRating" class="list-group-item">Rating: {{rating}}</li>
-    <li id="releaseDate" class="list-group-item">Release Date: {{release_dates.0.date}}</li>
-  </ul>
+  <div class="card mt-3" style="width: 18rem">
+    <img
+      id="cover"
+      src="http:{{formatIgdbUrl cover.url}}"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 id="gameName" class="card-title">{{name}}</h5>
+      <p id="summary" class="card-text">{{summary}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Platform: {{platforms.0.name}}</li>
+      <li class="list-group-item">Rating: {{formatRatings rating}}</li>
+      <li class="list-group-item">Release Date:
+        {{formattedDate release_dates.0.date}}</li>
+    </ul>
 
-  <div class="card-body">
-    <button data-type="want-to-play" type="submit" id="want-to-play-btn" class="btn btn-success">Want To Play</button>
-    <button data-type="have-played" type="submit" id="have-played-btn" class="btn btn-success">Have Played</button>
+    <div class="card-body">
+      <button
+        data-type="want-to-play"
+        type="submit"
+        id="want-to-play-btn"
+        class="btn btn-success"
+      >Want To Play</button>
+      <button
+        data-type="have-played"
+        type="submit"
+        id="have-played-btn"
+        class="btn btn-success"
+      >Have Played</button>
+    </div>
   </div>
-</div>
 </form>

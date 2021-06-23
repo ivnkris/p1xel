@@ -20,10 +20,6 @@ const renderHomePage = async (req, res) => {
 
     const topResults = response.data;
 
-    
-
-    console.log(topResults);
-
     if (req.session.isLoggedIn) {
       const gameData = await Game.findAll({
         where: {

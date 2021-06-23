@@ -24,14 +24,40 @@
           </div>
         </div>
 
-        <!-- latest user updates -->
-        <div class="row container m-2">
-          <div class="col col-10">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
-            nesciunt quaerat laboriosam facilis vitae, dolorem accusantium illum
-            molestiae eum quis, debitis enim atque, et aspernatur accusamus vel
-            iusto dolorum suscipit!
+<!-- latest user updates -->
+        <div class="row container m-2 d-flex justify-content-around my-5">
+          <!-- Steam Profile Info -->
+          {{#if data}}
+                      <div class="col col-12 row my-3">
+            <div class="col-12 text-center">
+              <img src={{data.userData.avatarmedium}} alt="steam profile img" width="100px" height="auto">
+              <div class="m-2">{{data.userData.personaname}}</div>
+              <div class="m-2"><a href={{data.userData.profileurl}} target="_blank">View my profile on Steam</a></div>
+              <div class="m-2">Previous Login: <span>{{formattedDate data.userData.lastlogoff}}</span></div>
+            </div>
           </div>
+          <!-- Recently PLayed Games -->
+          <div class="col col-12 row d-flex justify-content-around my-3">
+            {{#each data.userPlayedGames as |game|}}
+            {{> steam-game-card}}
+            {{/each}}
+
+          </div>
+          <!-- steam friends -->
+          <div class="col col-12 row d-flex justify-content-around my-3">
+            
+            {{#each data.userFriendsList.friendsProfiles as |friend|}}
+            {{> steam-friend-card}}
+            {{/each}}
+          
+
+          </div>
+          {{else}}
+          <div class="d-flex text-center flex-column">
+            <h1 class="my-3">There is no Steam Account linked to this account</h1>
+            <h3 class="my-3">Unfortunately, this section cannot be displayed because your account is not linked with an active Steam Account</h3>
+          </div>
+          {{/if}}
         </div>
       </div>
 

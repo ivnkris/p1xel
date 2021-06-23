@@ -21,8 +21,6 @@ const handleSubmit = async (event) => {
   } else {
     window.location.replace("/user-profile");
   }
-
-  console.log(req.session);
 };
 
 $("#submit-login").submit(handleSubmit);

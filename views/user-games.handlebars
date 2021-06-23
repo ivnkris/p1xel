@@ -1,1 +1,46 @@
-<h1>User Games</h1>
+    <div class="container-fluid row my-container m-0 p-1">
+      <!-- container 1 -->
+      {{> private-navbar}}
+
+      <!-- container 2 -->
+      <div
+        class="
+          col-lg-10
+          d-flex
+          justify-content-center
+          flex-column
+          col-sm-12
+        "
+      >
+        <div
+          class="
+            container
+            d-flex
+            flex-wrap flex-lg-row flex-sm-column
+            justify-content-around
+            mt-3
+          "
+        >
+          {{!-- add if else statement: if user has any games as  wish to play or have played, display them here else display a message that infomrs him that he must add at least a  game to either of these lists for it/them to be displayed here --}}
+
+          {{!-- change game color/text/design/button color/ border color (something) by wish to play/have played --}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+          {{> user-game-card}}
+
+        </div>
+      </div>
+    </div>
