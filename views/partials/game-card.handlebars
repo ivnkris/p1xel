@@ -34,6 +34,12 @@
         data-type="{{release_dates.0.date}}"
       >
         Release Date:
+      <p id="summary" class="card-text">{{trimSummary summary}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Platform: {{platforms.0.name}}</li>
+      <li class="list-group-item">Rating: {{formatRatings rating}}</li>
+      <li class="list-group-item">Release Date:
         {{formattedDate release_dates.0.date}}</li>
     </ul>
 

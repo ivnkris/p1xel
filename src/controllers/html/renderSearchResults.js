@@ -24,9 +24,15 @@ const renderSearchResults = async (req, res) => {
 
     const results = response.data;
 
-    return res.render("search-results", { options, results });
+    if (results.length > 0) {
+      return res.render("search-results", { options, results });
+    } else {
+      results.emptySearch = true;
+      return res.render("search-results", { options, results });
+    }
   } else {
-    const results = null;
+    const results = {};
+    results.emptySearch = true;
     return res.render("search-results", { options, results });
   }
 };

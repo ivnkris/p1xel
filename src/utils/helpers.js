@@ -29,4 +29,12 @@ module.exports = {
       return achievement.split("_").join(" ");
     }
   },
+
+  trimSummary: (summary) => {
+    if (summary) {
+      let newSummary = summary.slice(0, 512);
+      newSummary = newSummary + "[...]";
+      return newSummary;
+    }
+  },
 };
