@@ -15,8 +15,8 @@ const onSubmit = async (event) => {
   const name = form.find("#gameName").html();
   const cover_art = form.find("#cover").attr("data-type");
   const platform = form.find("#platform").attr("data-type");
-  const critic_rating = form.find("#criticRating").attr("data-type");
-  const release_date = form.find("#releaseDate").attr("data-type");
+  const critic_rating = parseInt(form.find("#criticRating").attr("data-type"));
+  const release_date = parseInt(form.find("#releaseDate").attr("data-type"));
   const user_id = parseInt(form[0].dataset.user);
 
   const options = {
