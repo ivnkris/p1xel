@@ -8,7 +8,6 @@ const renderSearchResults = async (req, res) => {
 
   const stringifySearch = decodeURI(searchInput);
 
-  console.log(stringifySearch);
   if (searchInput) {
     const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
     const config = {
@@ -19,14 +18,11 @@ const renderSearchResults = async (req, res) => {
         Authorization: "Bearer zzrepo6q4zb5jvw5jxqswmpgc6ef0s",
         "Content-Type": "application/json",
       },
-      data: data,
+      data,
     };
     const response = await axios(config);
 
     const results = response.data;
-    // console.log(results);
-
-    console.log(typeof results[0].cover.url);
 
     return res.render("search-results", { options, results });
   } else {
