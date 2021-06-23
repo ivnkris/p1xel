@@ -1,6 +1,6 @@
 const STEAM_API_KEY = "B56468BAD7D8396DF9B20F6148A9080D";
 const axios = require("axios");
-const User = require("../../models/User");
+const { User, Followers } = require("../../models");
 
 const renderUserProfile = async (req, res) => {
   const { steamUsername, userId } = req.session;
@@ -61,12 +61,27 @@ const renderUserProfile = async (req, res) => {
     return userData.about_me;
   };
 
+  const getFollowers = async () => {
+    const followersData = await Followers.findAll({
+      where: {
+        user_id: userId,
+      },
+      include: User,
+    });
+    const formattedFollowersData = followersData.map((follower) =>
+      follower.get({ plain: true })
+    );
+    console.log(formattedFollowersData);
+    return formattedFollowersData;
+  };
+
   if (steamUsername) {
     const data = {
       userData: await getUserData(),
       userPlayedGames: await getRecentlyPlayedGames(),
       userFriendsList: await getFriendsList(),
       userAboutMe: await getAboutMe(),
+      userFollowers: await getFollowers(),
     };
 
     res.render("user-profile", { options, data });
