@@ -48,9 +48,9 @@ const schema = {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  profile_picture: {
-    type: DataTypes.STRING,
-    defaultValue: "insert picture here",
+  about_me: {
+    type: DataTypes.TEXT,
+    defaultValue: "DefaultValue",
   },
   friends: {
     type: DataTypes.STRING,

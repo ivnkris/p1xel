@@ -24,7 +24,7 @@ const login = async (req, res) => {
       req.session.lastName = user.last_name;
       req.session.userId = user.id;
       req.session.steamUsername = user.steam_id;
-      req.session.profilePicture = user.profile_picture;
+      req.session.aboutMe = user.about_me;
       return res.redirect("/user-profile");
     });
   } catch (error) {
@@ -53,6 +53,7 @@ const signup = async (req, res) => {
       password,
       steamUsername,
       profilePicture,
+      aboutMe,
     } = req.body;
 
     if (firstName && lastName && username && email && password) {
@@ -64,6 +65,7 @@ const signup = async (req, res) => {
         password,
         steam_id: steamUsername,
         profile_picture: profilePicture,
+        about_me: aboutMe,
       });
 
       return res.status(200).json({ data: "Successfully registered!" });

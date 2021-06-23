@@ -6,7 +6,7 @@
     "username": "myusername",
     "email": "username@email.domain",
     "password": "pass123",
-    "profile_picture": "random url",
+    "about_me": "TEST TO SEE IF IT COMES FROM DB Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi veniam ullam nemo est sit, fugit a dicta, deserunt cupiditate ipsum magnam quas quos odio libero, placeat corrupti beatae quidem molestiae ut quia magni nisi harum. ",
     "friends": "[1, 2, 3]"
   },
   {
@@ -16,7 +16,7 @@
     "username": "myusername222",
     "email": "username222@email.domain",
     "password": "pass123",
-    "profile_picture": ""
+    "about_me": "TEST TO SEE IF IT COMES FROM DB 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi veniam ullam nemo est sit, fugit a dicta, deserunt cupiditate ipsum magnam quas quos odio libero, placeat corrupti beatae quidem molestiae ut quia magni nisi harum. Explicabo, aliquid assumenda dolorum dolore, repellat pariatur temporibus eaque error voluptates ex porro eveniet?"
   },
   {
     "steam_id": "3456789012",
@@ -25,7 +25,7 @@
     "username": "myusername333",
     "email": "username333@email.domain",
     "password": "pass123",
-    "profile_picture": "random url 2",
+    "about_me": "TEST TO SEE IF IT COMES FROM DB 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi veniam ullam nemo est sit, fugit a dicta, deserunt cupiditate ipsum magnam quas quos odio libero, placeat corrupti beatae quidem molestiae ut quia magni nisi harum. Explicabo, aliquid assumenda dolorum dolore, repellat pariatur temporibus eaque error voluptates ex porro eveniet?",
     "friends": "[1, 2, 4]"
   },
   {
@@ -35,14 +35,14 @@
     "username": "myusername444",
     "email": "username444@email.domain",
     "password": "pass123444",
-    "profile_picture": "random url 3"
+    "about_me": "TEST TO SEE IF IT COMES FROM DB 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi veniam ullam nemo est sit, fugit a dicta, deserunt cupiditate ipsum magnam quas quos odio libero, placeat corrupti beatae quidem molestiae ut quia magni nisi harum. Explicabo, aliquid assumenda dolorum dolore, repellat pariatur temporibus eaque error voluptates ex porro eveniet?"
   },
   {
-    "first_name": "first555",
+    "first_name": "2456555",
     "last_name": "last555",
     "username": "myusername555",
     "email": "username555@email.domain",
     "password": "pass125",
-    "profile_picture": "random url 3"
+    "about_me": "TEST TO SEE IF IT COMES FROM DB 4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi veniam ullam nemo est sit, fugit a dicta, deserunt cupiditate ipsum magnam quas quos odio libero, placeat corrupti beatae quidem molestiae ut quia magni nisi harum. Explicabo, aliquid assumenda dolorum dolore, repellat pariatur temporibus eaque error voluptates ex porro eveniet?"
   }
 ]
