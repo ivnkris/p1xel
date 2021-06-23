@@ -8,7 +8,9 @@ const handleSubmit = async (event) => {
   const password = $("#password").val();
   const confirmPassword = $("#confirmPassword").val();
   const steamUsername = $("#steamUsername").val();
-  const profilePicture = $("#profilePicture").val();
+  const aboutMe = $("#aboutMe").val();
+
+  console.log(aboutMe);
 
   const options = {
     method: "POST",
@@ -21,9 +23,11 @@ const handleSubmit = async (event) => {
       email,
       password,
       steamUsername,
-      profilePicture,
+      aboutMe,
     }),
   };
+
+  console.log(steamUsername);
 
   if (!firstName || !lastName || !username || !password || !confirmPassword) {
     $("#signup-alert").text(
