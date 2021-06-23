@@ -23,43 +23,43 @@ const schema = {
   },
   cover_art: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   screenshots: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   critic_rating: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   total_rating: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   is_multiplayer: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   release_date: {
     type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
   },
   platform: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   genre: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
   },
   has_game: {
     type: DataTypes.BOOLEAN,
-    allowNull: false,
+    allowNull: true,
   },
   want_game: {
     type: DataTypes.BOOLEAN,
-    allowNull: false,
+    allowNull: true,
   },
   user_id: {
     type: DataTypes.INTEGER,

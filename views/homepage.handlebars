@@ -1,7 +1,10 @@
 <div class="container-fluid row border border-success my-container m-0 p-1">
-  <!-- container 1 -->
+  <!-- container 1 --> 
+  {{#if isLoggedIn}}
+  {{> private-navbar}}
+  {{else}}
   {{> public-navbar}}
-
+  {{/if}}
         <!-- container 2 -->
       <div class="col-lg-8 text-center col-sm-12">
         <!-- carousel 1 -->

@@ -1,8 +1,9 @@
+<form name="game-form" id={{id}}>
 <div class="card mt-3" style="width: 18rem">
-  <img src="http:{{formatIgdbUrl cover.url}}" class="card-img-top" alt="..." />
+  <img id="cover" src="http:{{formatIgdbUrl cover.url}}" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{summary}}</p>
+    <h5 id ="gameName" class="card-title">{{name}}</h5>
+    <p id="summary" class="card-text">{{summary}}</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Platform: {{platforms.0.name}}</li>
@@ -12,7 +13,8 @@
   </ul>
 
   <div class="card-body">
-    <a href="#" class="card-link">Want To Play</a>
-    <a href="#" class="card-link">Have Played</a>
+    <button data-type="want-to-play" type="submit" id="want-to-play-btn" class="btn btn-success">Want To Play</button>
+    <button data-type="have-played" type="submit" id="have-played-btn" class="btn btn-success">Have Played</button>
   </div>
 </div>
+</form>

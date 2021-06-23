@@ -44,10 +44,16 @@ const renderHomePage = async (req, res) => {
         gameData: formattedGameData,
         userData: formattedUserData,
         topResults,
+        isLoggedIn: req.session.isLoggedIn,
       };
       return res.render("homepage", dataObject);
     } else {
-      return res.render("homepage", { topResults });
+      const dataObject = {
+        topResults,
+        isLoggedIn:req.session.isLoggedIn,
+      }
+      
+      return res.render("homepage", dataObject);
     }
   } catch (error) {
     console.log(`[ERROR] - ${error.message}`);
