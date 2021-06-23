@@ -1,5 +1,6 @@
 const renderTeamPage = (req, res) => {
-  res.render("team-page");
+  const {isLoggedIn} = req.session;
+  res.render("team-page", {isLoggedIn});
 };
 
 module.exports = renderTeamPage;

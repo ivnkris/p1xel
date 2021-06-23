@@ -1,13 +1,17 @@
 <div class="container-fluid row my-container m-0 p-1">
       <!-- container 1 -->
+      {{#if isLoggedIn}}
+      {{> private-navbar}}
+      {{else}}
       {{> public-navbar}}
+      {{/if}}
       <!-- container 2 -->
       <div class="col-lg-10 d-flex justify-content-around flex-wrap col-sm-12">
         <!-- Card 5 -->
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_adam.png"
             alt="Card image cap"
           />
           <div class="card-body">
@@ -18,7 +22,7 @@
               magnam, esse doloremque veritatis consequuntur labore
               exercitationem autem veniam accusamus?
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://github.com/KingArthur0877" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
             <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
@@ -26,95 +30,80 @@
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_hakel.jpg"
             alt="Card image cap"
           />
           <div class="card-body">
-            <h5 class="card-title">Adam Arthur</h5>
+            <h5 class="card-title">Mehmet Hakel Cam</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, qui
-              vitae. Dicta fugit rem ipsum, unde aliquam placeat eos laudantium
-              magnam, esse doloremque veritatis consequuntur labore
-              exercitationem autem veniam accusamus?
+              Hi. My name is Mehmet Hakel Çam. I am Civil-Geophysical Engineer and I am currently studying to be a Full Stack Software Engineer. Check my repositories, please.
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/Hakkelo89" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/mehmet-hakel-cam-058439163/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
         <!-- Card 5 -->
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_kris.jpg"
             alt="Card image cap"
           />
           <div class="card-body">
-            <h5 class="card-title">Adam Arthur</h5>
+            <h5 class="card-title">Kris Ivan</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, qui
-              vitae. Dicta fugit rem ipsum, unde aliquam placeat eos laudantium
-              magnam, esse doloremque veritatis consequuntur labore
-              exercitationem autem veniam accusamus?
+              Full-stack JavaScript developer and current University of Birmingham coding bootcamp student with a graduation date of August 2021.
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/ivnkris" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/krisztian-ivan-10880478/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
         <!-- Card 5 -->
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_lee.png"
             alt="Card image cap"
           />
           <div class="card-body">
-            <h5 class="card-title">Adam Arthur</h5>
+            <h5 class="card-title">Lee Farnell</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, qui
-              vitae. Dicta fugit rem ipsum, unde aliquam placeat eos laudantium
-              magnam, esse doloremque veritatis consequuntur labore
-              exercitationem autem veniam accusamus?
+              31 | Coding Boot Camp Student | Looking to become a full stack developer.
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/LeeFarnell" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/leefarnell/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
         <!-- Card 5 -->
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_michael.jpg"
             alt="Card image cap"
           />
           <div class="card-body">
-            <h5 class="card-title">Adam Arthur</h5>
+            <h5 class="card-title">Michael Crates</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, qui
-              vitae. Dicta fugit rem ipsum, unde aliquam placeat eos laudantium
-              magnam, esse doloremque veritatis consequuntur labore
-              exercitationem autem veniam accusamus?
+              Hey I am Michael, Currently doing a full stack developer course which im loving.
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/Cratesy" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/michael-crates-538752200/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
         <!-- Card 5 -->
         <div class="card mt-3" style="width: 18rem">
           <img
             class="card-img-top"
-            src="../assets/img/profile_pic.png"
+            src="/assets/img/profile_pic_tudor.jpg"
             alt="Card image cap"
           />
           <div class="card-body">
-            <h5 class="card-title">Adam Arthur</h5>
+            <h5 class="card-title">Tudor Tocan</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, qui
-              vitae. Dicta fugit rem ipsum, unde aliquam placeat eos laudantium
-              magnam, esse doloremque veritatis consequuntur labore
-              exercitationem autem veniam accusamus?
+              Full Stack Software Developer focused on building responsive, user-friendly web applications.
             </p>
-            <a href="#" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
-            <a href="#" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/ttudorandrei" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+            <a href="https://www.linkedin.com/in/tudor-tocan/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
           </div>
         </div>
       </div>
