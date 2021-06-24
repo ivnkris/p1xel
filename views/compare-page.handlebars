@@ -11,7 +11,7 @@
         <div class="col-5 d-flex justify-content-around flex-column">
           <ul class="card list-group list-group-flush text-center">
             {{#each data.userData as |achievement|}}
-              {{> compare-item}}
+              {{> user-compare-item}}
             {{/each}}
             <li class="list-group-item">
               <a href="#" class="btn btn-warning">Link to Steam</a>
@@ -20,11 +20,9 @@
         </div>
         <div class="col-5 d-flex justify-content-around flex-column">
           <ul class="card list-group list-group-flush text-center">
-              {{> compare-item}}
-              {{> compare-item}}
-              {{> compare-item}}
-              {{> compare-item}}
-              {{> compare-item}}
+            {{#each data.followerData as |achievement|}}
+              {{> follower-compare-item}}
+            {{/each}}
             <li class="list-group-item">
               <a href="#" class="btn btn-warning">Link to Steam</a>
             </li>

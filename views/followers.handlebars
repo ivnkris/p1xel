@@ -3,7 +3,17 @@
       {{> private-navbar}}
 
       <!-- container 2 -->
-      <div class="col-lg-10 col-sm-12">
+      <div class="col-lg-10 col-sm-12 mt-5">
+
+        <div class="dropdown text-end">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"  data-bs-toggle="dropdown" aria-expanded="false">
+      Choose Your Game
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" data-value="730" name="" >Counter Strike GO</a></li>
+            <li><a class="dropdown-item" data-value="74256430" name="" >Counter Strike GO</a></li>
+    </ul>
+    </div>
 
         {{#each data.userFollowers as |follower|}}
         {{> followers-cards}}
