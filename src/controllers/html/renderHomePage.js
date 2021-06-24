@@ -20,13 +20,14 @@ const renderHomePage = async (req, res) => {
 
     const topResults = response.data;
 
-    console.log(req.session);
-    const { userId } = req.session;
-    const games = await Game.findAll({
-      where: { user_id: userId },
-    });
-    console.log(games);
-    const formatGames = games.map((game) => game.get({ plain: true }));
+    const getUsers = async () => {
+      const usersData = await User.findAll();
+      const formattedUsersData = usersData.map((user) =>
+        user.get({ plain: true })
+      );
+      console.info(formattedUsersData);
+      return formattedUsersData;
+    };
 
     if (req.session.isLoggedIn) {
       const gameData = await Game.findAll({
@@ -48,24 +49,35 @@ const renderHomePage = async (req, res) => {
         user.get({ plain: true })
       );
 
+      console.log(req.session);
+      const { userId } = req.session;
+      const games = await Game.findAll({
+        where: { user_id: userId },
+      });
+      console.log(games);
+      const formatGames = games.map((game) => game.get({ plain: true }));
+
       const dataObject = {
         games: formatGames,
         gameData: formattedGameData,
         userData: formattedUserData,
         topResults,
         isLoggedIn: req.session.isLoggedIn,
+        users: await getUsers(),
       };
+
       return res.render("homepage", dataObject);
     } else {
       const dataObject = {
         topResults,
         isLoggedIn: req.session.isLoggedIn,
+        users: await getUsers(),
       };
 
       return res.render("homepage", dataObject);
     }
   } catch (error) {
-    console.log(`[ERROR] - ${error.message}`);
+    console.info(`[ERROR] - ${error.message}`);
     res.status(500).json({ error: "Failed to render homepage" });
   }
 };

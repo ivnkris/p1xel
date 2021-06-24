@@ -89,7 +89,7 @@ const renderUserProfile = async (req, res) => {
 
       res.render("user-profile", { options, data });
     } else {
-      const { steamUsername, userId } = req.session;
+      const { userId } = req.session;
 
       const getAboutMe = async () => {
         const userData = await User.findByPk(userId);
@@ -101,7 +101,7 @@ const renderUserProfile = async (req, res) => {
       res.render("user-profile", { noSteamData });
     }
   } catch (error) {
-    const { steamUsername, userId } = req.session;
+    const { userId } = req.session;
 
     const getAboutMe = async () => {
       const userData = await User.findByPk(userId);
