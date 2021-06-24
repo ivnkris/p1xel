@@ -2,8 +2,13 @@
   <div class="card mt-3" style="width: 18rem">
     <a href="/game/{{id}}"><img
         id="cover"
+        {{#if cover.url}}
         data-type="http:{{formatIgdbUrl cover.url}}"
         src="http:{{formatIgdbUrl cover.url}}"
+        {{else}}
+        data-type="cover-not-found"
+        src="/assets/img/imagenotfound.png"
+        {{/if}}
         class="card-img-top"
         alt="..."
       /></a>
