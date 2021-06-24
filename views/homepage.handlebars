@@ -63,6 +63,8 @@
           </button>
         </div>
         <!-- carousel 2 -->
+        {{#if isLoggedIn}}
+ 
         <h4>Player Games</h4>
         <div
           id="carouselExampleCaptions2"
@@ -157,18 +159,19 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+  {{/if}}
       </div>
 
       <!-- container 3 -->
       <div class="col-lg-2 col-sm-12">
-        <h4>Friends List</h4>
+        <h4>Followers List</h4>
         <div class="list-group">
           <button
             type="button"
             class="list-group-item list-group-item-action active text-center"
             aria-current="true"
           >
-            friend 1
+            Follower 1
           </button>
           <button
             type="button"
@@ -177,25 +180,25 @@
               text-center text-center
             "
           >
-            friend 2
+            Follower 2
           </button>
           <button
             type="button"
             class="list-group-item list-group-item-action text-center"
           >
-            friend 3
+            Follower 3
           </button>
           <button
             type="button"
             class="list-group-item list-group-item-action text-center"
           >
-            friend 4
+            Follower 4
           </button>
           <button
             type="button"
             class="list-group-item list-group-item-action text-center"
           >
-            friend 5
+            Follower 5
           </button>
         </div>
       </div>
