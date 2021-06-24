@@ -25,7 +25,7 @@ const renderHomePage = async (req, res) => {
       const formattedUsersData = usersData.map((user) =>
         user.get({ plain: true })
       );
-      console.log(formattedUsersData);
+      console.info(formattedUsersData);
       return formattedUsersData;
     };
 
@@ -64,12 +64,11 @@ const renderHomePage = async (req, res) => {
         isLoggedIn: req.session.isLoggedIn,
         users: await getUsers(),
       };
-      console.log(dataObject.users);
 
       return res.render("homepage", dataObject);
     }
   } catch (error) {
-    console.log(`[ERROR] - ${error.message}`);
+    console.info(`[ERROR] - ${error.message}`);
     res.status(500).json({ error: "Failed to render homepage" });
   }
 };

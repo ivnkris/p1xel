@@ -19,7 +19,9 @@ const getAllFollowers = async (req, res) => {
 
 const followNewUser = async (req, res) => {
   try {
-    const newFollower = await Followers.create(req.body);
+    const { follower_id } = req.body;
+    const user_id = req.session.userId;
+    const newFollower = await Followers.create({ follower_id, user_id });
     return res.status(200).json(newFollower);
   } catch (error) {
     console.log(error.message);
