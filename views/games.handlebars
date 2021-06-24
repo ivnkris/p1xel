@@ -31,12 +31,13 @@
             <!-- platform/genre/release date -->
             <div class="mt-4">
               <h5>Further Information</h5>
-              <p>Platform:
-        {{game.platforms.0.name}}</p>
+              <p>Platform: {{#each game.platforms as |platform|}}
+        {{platform.name}}. {{/each}}
+        </p>
         <p>Critic Rating:
         {{formatRatings game.rating}}</p>
-        <p>Release Date:
-        {{formattedDate game.release_dates.0.date}}</p>
+        <p>Release Date: {{#each game.release_dates as |release_dates|}}
+        {{formattedDate release_dates.date}} {{/each}} </p>
             </div>
             <div
               id="carouselExampleCaptions"
