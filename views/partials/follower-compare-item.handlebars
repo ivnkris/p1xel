@@ -1,0 +1,7 @@
+<li class="list-group-item fw-bold">
+  <div>{{changeUnderscoreToSpace apiname}}</div>
+  {{#if (checkIfAchievement achieved)}}
+    <div><span class="text-success">Achieved</span> on {{formattedDate unlocktime}}</div>
+  {{else}}
+    <div>Currently<span class="text-danger">Not Achieved</span></div>
+  {{/if}}

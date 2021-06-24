@@ -19,7 +19,10 @@
     </div>
     <div class="col-md-3 text-center align-self-center p-0" id="user-image">
       {{#if user.steam_id}}
-        <button class="btn btn-primary" value="{{user.steam_id}}">Steam Compare</button>
+        <button
+          class="btn btn-primary compare"
+          data-value="{{user.steam_id}}"
+        >Steam Compare</button>
       {{else}}
         <div>Link a steam account to compare achievements</div>
       {{/if}}
