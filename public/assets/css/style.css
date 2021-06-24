@@ -41,3 +41,23 @@ a:hover {
 .carousel-control-next-icon {
   color: var(--light-text);
 }
+
+.card-body {
+  background-color: var(--mid-text);
+}
+.list-group-item {
+  background-color: var(--mid-text);
+  color: var(--background);
+}
+
+h5 {
+  text-decoration: underline;
+}
+h2 {
+  font-weight: bolder;
+}
+
+#game-cover-art {
+  border: 3px solid var(--mid-text);
+  border-radius: 5px;
+}
