@@ -1,24 +1,43 @@
 :root {
-  --dark-green: #00793e;
-  --light-green: #ccffbd;
+  --background: #dddddd;
+  --dark-text: #222831;
+  --mid-text: #30475e;
+  --light-text: #f05454;
+  --other: #8bac0f;
+}
+
+body {
+  background-color: var(--dark-text);
+  color: var(--background);
+  text-shadow: 1px 1px 1px black;
+  font-family: "Nova Square", cursive;
 }
 
 .carousel {
   width: auto;
-  max-height: 374px;
+  max-height: 400px;
   overflow: hidden;
 }
 
 .d-block {
-  width: 50%;
-  height: auto;
-  margin: auto;
+  height: 400px;
+  width: auto;
+  border: 3px solid var(--mid-text);
+  border-radius: 5px;
 }
 
 a {
-  color: var(--dark-green) !important;
+  color: var(--light-text) !important;
 }
 
 a:hover {
-  color: var(--light-green) !important;
+  color: var(--background) !important;
+}
+
+.carousel-control-prev-icon {
+  color: var(--light-text);
+}
+
+.carousel-control-next-icon {
+  color: var(--light-text);
 }
