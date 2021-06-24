@@ -49,7 +49,16 @@ const renderHomePage = async (req, res) => {
         user.get({ plain: true })
       );
 
+      console.log(req.session);
+      const { userId } = req.session;
+      const games = await Game.findAll({
+        where: { user_id: userId },
+      });
+      console.log(games);
+      const formatGames = games.map((game) => game.get({ plain: true }));
+
       const dataObject = {
+        games: formatGames,
         gameData: formattedGameData,
         userData: formattedUserData,
         topResults,
