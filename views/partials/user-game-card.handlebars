@@ -1,21 +1,22 @@
 <div class="card mt-3 p-0 text-center" style="width: 21rem">
-  <img
-    src="../assets/img/341CCFC6-09BB-4267-8556-D000BF219458.JPG"
-    class="card-img-top p-0"
-    alt="..."
-  />
+  <img src="{{cover_art}}" class="card-img-top p-0" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">Game Name</h5>
-    <p class="card-text">Game Summary</p>
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{summary}}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Platform</li>
-    <li class="list-group-item">Rating</li>
-    <li class="list-group-item">Release Date</li>
+    <li class="list-group-item">{{platform}}</li>
+    <li class="list-group-item">{{critic_rating}}</li>
+    <li class="list-group-item">{{formattedDate release_date}}</li>
   </ul>
   <div class="card-body">
     <div class="card-text">
-      Display Have Played or Want to play (depending on user choice)
+      {{#if want_game}}
+        <h5>I want to play</h5>
+      {{/if}}
+      {{#if has_game}}
+        <h5>I have played</h5>
+      {{/if}}
     </div>
     <div class="card-text">
       <button class="btn btn-primary">remove from list(either HP or WTP)</button>
