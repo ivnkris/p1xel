@@ -1,5 +1,11 @@
-<div class="position-absolute top-50 start-50 translate-middle">
-  <form id="submit-signup">
+<div class="container-fluid row my-container m-0 p-1">
+  <!-- container 1 -->
+  {{> public-navbar}}
+
+<div class="col-lg-10 text-center col-sm-12">
+
+<div class="w-75 justify-content-around">
+  <form class="mt-2"  id="submit-signup">
     <div class="mb-3">
       <input
         type="input"
@@ -29,7 +35,7 @@
         type="number"
         class="form-control"
         id="steamUsername"
-        placeholder="Steam Username"
+        placeholder="Steam User ID"
       />*
     </div>
     <div class="mb-3">
@@ -68,7 +74,8 @@
       <button type="submit" class="btn btn-primary">Sign Up</button>
     </div>
   </form>
-  <div>Please make sure the Steam Username you are using is the 17 digit one
-    that you find on steam</div>
+  <div>* Please make sure that the Steam User ID you are using is the 17 digit number
+    that you find on your account page.</div>
   <div class="text-danger fw-bold mx-2 my-3" id="signup-alert"></div>
+</div>
 </div>

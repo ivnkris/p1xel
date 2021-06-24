@@ -1,6 +1,9 @@
-<div class="card mt-3" style="max-width: 100vw">
-  <div class="row g-0">
-    <div class="col-md-4 text-center align-self-center pt-2 pb-2">
+<div class="card mt-3 p-0" id="user-card" style="max-width: 100vw">
+  <div class="row g-0" id="user-card">
+    <div
+      class="col-md-4 text-center align-self-center pt-2 pb-2"
+      id="user-image"
+    >
       <img
         src="../assets/img/profile_img.png"
         alt="..."
@@ -8,14 +11,18 @@
         height="auto"
       />
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 p-0">
       <div class="card-body text-center align-self-center">
-        <h3 class="card-title">Username</h3>
-        <h3>Full Name</h3>
+        <h3 class="card-title">{{user.username}}</h3>
+        <h3>{{user.first_name}} {{user.last_name}}</h3>
       </div>
     </div>
-    <div class="col-md-3 text-center align-self-center">
-      <button class="btn btn-primary">Steam Compare</button>
+    <div class="col-md-3 text-center align-self-center p-0" id="user-image">
+      {{#if user.steam_id}}
+        <button class="btn btn-primary" value="{{user.steam_id}}">Steam Compare</button>
+      {{else}}
+        <div>Link a steam account to compare achievements</div>
+      {{/if}}
     </div>
   </div>
 </div>

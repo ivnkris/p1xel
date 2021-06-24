@@ -1,24 +1,74 @@
 :root {
-  --dark-green: #00793e;
-  --light-green: #ccffbd;
+  --background: #dddddd;
+  --dark-text: #222831;
+  --mid-text: #30475e;
+  --light-text: #f05454;
+  --other: #8bac0f;
+}
+
+body {
+  background-color: var(--dark-text);
+  color: var(--background);
+  text-shadow: 1px 1px 1px black;
+  font-family: "Nova Square", cursive;
 }
 
 .carousel {
   width: auto;
-  max-height: 374px;
+  max-height: 500px;
   overflow: hidden;
 }
 
 .d-block {
-  width: 50%;
-  height: auto;
-  margin: auto;
+  height: 400px;
+  width: auto;
+  border: 3px solid var(--mid-text);
+  border-radius: 5px;
 }
 
 a {
-  color: var(--dark-green) !important;
+  color: var(--light-text) !important;
 }
 
 a:hover {
-  color: var(--light-green) !important;
+  color: var(--background) !important;
+}
+
+.carousel-control-prev-icon {
+  color: var(--light-text);
+}
+
+.carousel-control-next-icon {
+  color: var(--light-text);
+}
+
+.card-body {
+  background-color: var(--mid-text);
+}
+.list-group-item {
+  background-color: var(--mid-text);
+  color: var(--background);
+}
+
+h5 {
+  text-decoration: underline;
+}
+h2 {
+  font-weight: bolder;
+}
+
+#game-cover-art {
+  border: 3px solid var(--mid-text);
+  border-radius: 5px;
+}
+
+#user-card {
+  background-color: var(--mid-text);
+}
+
+.dropdown {
+  color: var(--background);
+  text-shadow: 0px 0px 0px black;
+  font-family: "Nova Square", cursive;
+  justify-content: center;
 }

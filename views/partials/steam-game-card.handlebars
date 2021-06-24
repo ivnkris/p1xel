@@ -1,9 +1,14 @@
-            <div class="card mt-3" style="width: 18rem">
-              <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
-              <img src="http://media.steampowered.com/steamcommunity/public/images/apps/{{appid}}/{{img_logo_url}}.jpg" class="card-img-top" alt="..."/>
-              <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
-                <p class="card-text">Play time in last 2 weeks <span>{{playtime_2weeks}} minutes</span></p>
-                <p class="card-text">Play time {{playtime_forever}} minutes</p>
-              </div>
-            </div>
+<div class="card mt-3 p-0" style="width: 18rem">
+  <!--Url to create before rendering the cards http://media.steampowered.com/steamcommunity/public/images/apps/{appid}/{hash}.jpg. -->
+  <img
+    src="http://media.steampowered.com/steamcommunity/public/images/apps/{{appid}}/{{img_logo_url}}.jpg"
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">Play time in last 2 weeks:
+      <span>{{playtime_2weeks}} minutes</span></p>
+    <p class="card-text">Play time: {{playtime_forever}} minutes</p>
+  </div>
+</div>

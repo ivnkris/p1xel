@@ -9,7 +9,7 @@ const renderSearchResults = async (req, res) => {
   const stringifySearch = decodeURI(searchInput);
 
   if (searchInput) {
-    const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
+    const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; limit 80; search "${stringifySearch}";`;
     const config = {
       method: "post",
       url: "https://api.igdb.com/v4/games",
