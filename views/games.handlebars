@@ -36,8 +36,8 @@
         </p>
         <p>Critic Rating:
         {{formatRatings game.rating}}</p>
-        <p>Release Date: {{#each game.release_dates as |release_dates|}}
-        {{formattedDate release_dates.date}} {{/each}} </p>
+        <p>Release Date:
+        {{formattedDate game.release_dates.0.date}} </p>
             </div>
             <div
               id="carouselExampleCaptions"
