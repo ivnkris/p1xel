@@ -13,12 +13,16 @@
     </div>
     <div class="col-md-5 p-0">
       <div class="card-body text-center align-self-center">
-        <h3 class="card-title">Username</h3>
-        <h3>Full Name</h3>
+        <h3 class="card-title">{{user.username}}</h3>
+        <h3>{{user.first_name}} {{user.last_name}}</h3>
       </div>
     </div>
     <div class="col-md-3 text-center align-self-center p-0" id="user-image">
-      <button class="btn btn-primary">Steam Compare</button>
+      {{#if user.steam_id}}
+        <button class="btn btn-primary" value="{{user.steam_id}}">Steam Compare</button>
+      {{else}}
+        <div>Link a steam account to compare achievements</div>
+      {{/if}}
     </div>
   </div>
 </div>

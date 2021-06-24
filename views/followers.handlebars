@@ -4,13 +4,9 @@
 
       <!-- container 2 -->
       <div class="col-lg-10 col-sm-12">
-        <!-- card 1 -->
+
+        {{#each data.userFollowers as |follower|}}
         {{> followers-cards}}
-        <!-- card 2 -->
-        {{> followers-cards}}
-        <!-- card 3 -->
-        {{> followers-cards}}
-        <!-- card 4 -->
-        {{> followers-cards}}
+        {{/each}}
       </div>
     </div>
