@@ -37,4 +37,10 @@ module.exports = {
       return newSummary;
     }
   },
+
+  checkIfData: (data) => {
+    if (!data) {
+      return (data = false);
+    }
+  },
 };

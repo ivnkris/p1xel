@@ -17,7 +17,13 @@
 
           <!-- about me section -->
           <div class="col col-lg-8 col-md-12">
+            {{#if data}}
             {{data.userAboutMe}}
+            {{/if}}
+
+            {{#if noSteamData}}
+            {{noSteamData.userAboutMe}}
+            {{/if}}
           </div>
         </div>
 
@@ -25,7 +31,7 @@
         <div class="row container m-2 d-flex justify-content-around my-5">
           <!-- Steam Profile Info -->
           {{#if data}}
-                      <div class="col col-12 row my-3">
+          <div class="col col-12 row my-3">
             <div class="col-12 text-center">
               <img src={{data.userData.avatarmedium}} alt="steam profile img" width="100px" height="auto">
               <div class="m-2">{{data.userData.personaname}}</div>
@@ -50,10 +56,17 @@
 
           </div>
           {{else}}
+          {{#unless noSteamData}}
           <div class="d-flex text-center flex-column">
             <h1 class="my-3">There is no Steam Account linked to this account</h1>
             <h3 class="my-3">Unfortunately, this section cannot be displayed because your account is not linked with an active Steam Account</h3>
           </div>
+          {{else}}
+          <div class="d-flex text-center flex-column">
+            <h1 class="my-3">There is no Steam Account linked to this account</h1>
+            <h3 class="my-3">Unfortunately, this section cannot be displayed because your account is not linked with an active Steam Account</h3>
+          </div>
+          {{/unless}}
           {{/if}}
         </div>
       </div>
