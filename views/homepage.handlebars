@@ -63,7 +63,7 @@
           </button>
         </div>
         <!-- carousel 2 -->
-        {{#if isLoggedIn}}
+      {{#if isLoggedIn}}
  
         <h4>Player Games</h4>
         <div
@@ -159,48 +159,17 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-  {{/if}}
+      {{/if}}
       </div>
 
       <!-- container 3 -->
-      <div class="col-lg-2 col-sm-12">
-        <h4>Followers List</h4>
-        <div class="list-group">
-          <button
-            type="button"
-            class="list-group-item list-group-item-action active text-center"
-            aria-current="true"
-          >
-            Follower 1
-          </button>
-          <button
-            type="button"
-            class="
-              list-group-item list-group-item-action
-              text-center text-center
-            "
-          >
-            Follower 2
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            Follower 3
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            Follower 4
-          </button>
-          <button
-            type="button"
-            class="list-group-item list-group-item-action text-center"
-          >
-            Follower 5
-          </button>
-        </div>
+      <div class="col-lg-2 col-sm-12 text-center">
+        <h4>Users</h4>
+        <ul class="list-group">
+        {{#each users}}
+          {{> user-list-item}}
+        {{/each}}
+      </ul>
       </div>
     </div>
     

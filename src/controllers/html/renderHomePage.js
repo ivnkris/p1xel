@@ -20,6 +20,15 @@ const renderHomePage = async (req, res) => {
 
     const topResults = response.data;
 
+    const getUsers = async () => {
+      const usersData = await User.findAll();
+      const formattedUsersData = usersData.map((user) =>
+        user.get({ plain: true })
+      );
+      console.log(formattedUsersData);
+      return formattedUsersData;
+    };
+
     if (req.session.isLoggedIn) {
       const gameData = await Game.findAll({
         where: {
@@ -45,14 +54,18 @@ const renderHomePage = async (req, res) => {
         userData: formattedUserData,
         topResults,
         isLoggedIn: req.session.isLoggedIn,
+        users: await getUsers(),
       };
+
       return res.render("homepage", dataObject);
     } else {
       const dataObject = {
         topResults,
-        isLoggedIn:req.session.isLoggedIn,
-      }
-      
+        isLoggedIn: req.session.isLoggedIn,
+        users: await getUsers(),
+      };
+      console.log(dataObject.users);
+
       return res.render("homepage", dataObject);
     }
   } catch (error) {
