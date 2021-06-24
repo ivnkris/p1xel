@@ -4,6 +4,8 @@ const axios = require("axios");
 const renderComparePage = async (req, res) => {
   const { steamUsername } = req.session;
 
+  const { followerId, gameName } = req.query;
+
   const options = {
     layout: "main",
   };
@@ -11,7 +13,18 @@ const renderComparePage = async (req, res) => {
   const getUserAchievements = async () => {
     const config = {
       method: "get",
-      url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=730&key=${STEAM_API_KEY}&steamid=${steamUsername}`,
+      url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${steamUsername}`,
+    };
+
+    const response = await axios(config);
+    const results = response.data.playerstats.achievements;
+    return results;
+  };
+
+  const getFollowerAchievements = async () => {
+    const config = {
+      method: "get",
+      url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${followerId}`,
     };
 
     const response = await axios(config);
@@ -20,9 +33,11 @@ const renderComparePage = async (req, res) => {
   };
 
   const userData = await getUserAchievements();
+  const followerData = await getFollowerAchievements();
 
   const data = {
     userData,
+    followerData,
   };
 
   res.render("compare-page", { options, data });
