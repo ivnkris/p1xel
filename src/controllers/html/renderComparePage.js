@@ -10,37 +10,42 @@ const renderComparePage = async (req, res) => {
     layout: "main",
   };
 
-  const getUserAchievements = async () => {
-    const config = {
-      method: "get",
-      url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${steamUsername}`,
+  try {
+    const getUserAchievements = async () => {
+      const config = {
+        method: "get",
+        url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${steamUsername}`,
+      };
+
+      const response = await axios(config);
+      const results = response.data.playerstats.achievements;
+      return results;
     };
 
-    const response = await axios(config);
-    const results = response.data.playerstats.achievements;
-    return results;
-  };
+    const getFollowerAchievements = async () => {
+      const config = {
+        method: "get",
+        url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${followerId}`,
+      };
 
-  const getFollowerAchievements = async () => {
-    const config = {
-      method: "get",
-      url: `http://api.steampowered.com/ISteamUserStats/GetPlayerAchievements/v0001/?appid=${gameName}&key=${STEAM_API_KEY}&steamid=${followerId}`,
+      const response = await axios(config);
+      const results = response.data.playerstats.achievements;
+      return results;
     };
 
-    const response = await axios(config);
-    const results = response.data.playerstats.achievements;
-    return results;
-  };
+    const userData = await getUserAchievements();
+    const followerData = await getFollowerAchievements();
 
-  const userData = await getUserAchievements();
-  const followerData = await getFollowerAchievements();
+    const data = {
+      userData,
+      followerData,
+    };
 
-  const data = {
-    userData,
-    followerData,
-  };
-
-  res.render("compare-page", { options, data });
+    res.render("compare-page", { options, data });
+  } catch (error) {
+    console.error({ error: "Missing Data" });
+    res.render("compare-page");
+  }
 };
 
 module.exports = renderComparePage;
