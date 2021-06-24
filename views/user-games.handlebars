@@ -10,6 +10,7 @@
           justify-content-center
           flex-column
           col-sm-12
+          row
         "
       >
         <div
@@ -21,12 +22,40 @@
             mt-3
           "
         >
+
+          <div class="col col-lg-6 text-center mt-5">
+            <h3>Want to Play</h3>
+          <div class="container d-flex
+            flex-wrap flex-row
+            justify-content-around
+            mt-3">
+                {{#each games as |game|}}
+                  {{#if want_game}}
+                    {{> user-game-card}}
+                  {{/if}}
+                {{/each}}
+            </div></div>
+
+          <div class="col col-lg-6 text-center mt-5">
+            <h3>Have Played</h3>
+          <div class="container d-flex
+            flex-wrap flex-row
+            justify-content-around
+            mt-3">
+            
+                {{#each games as |game|}}
+                  {{#if has_game}}
+                    {{> user-game-card}}
+                  {{/if}}
+                {{/each}}
+
+          </div></div>
           {{!-- add if else statement: if user has any games as  wish to play or have played, display them here else display a message that infomrs him that he must add at least a  game to either of these lists for it/them to be displayed here --}}
 
           {{!-- change game color/text/design/button color/ border color (something) by wish to play/have played --}}
-          {{#each games as |game|}}
+          {{!-- {{#each games as |game|}}
           {{> user-game-card}}
-          {{/each}}
+          {{/each}} --}}
         </div>
       </div>
     </div>
