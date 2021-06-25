@@ -1,5 +1,7 @@
+// importing dependencies
 const { User, Game, Rating, Comment } = require("../../models");
 
+// performing CRUD operations on ratings
 const getAllRatings = async (req, res) => {
   try {
     const allRatingsData = await Rating.findAll({
@@ -8,10 +10,12 @@ const getAllRatings = async (req, res) => {
 
     return res.status(200).json(allRatingsData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to get Ratings." });
   }
 };
+
 const getRatingById = async (req, res) => {
   try {
     const singleRatingData = await Rating.findByPk(req.params.id, {
@@ -20,10 +24,12 @@ const getRatingById = async (req, res) => {
 
     return res.status(200).json(singleRatingData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to get Rating." });
   }
 };
+
 const addRating = async (req, res) => {
   // Test with:
 
@@ -38,10 +44,12 @@ const addRating = async (req, res) => {
 
     return res.status(200).json(newRating);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to add Rating" });
   }
 };
+
 const updateRating = async (req, res) => {
   try {
     const ratingToBeUpdated = await Rating.update(req.body, {
@@ -52,10 +60,12 @@ const updateRating = async (req, res) => {
 
     return res.status(200).json(ratingToBeUpdated);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to update Rating" });
   }
 };
+
 const deleteRating = async (req, res) => {
   // Test with:
 
@@ -71,7 +81,8 @@ const deleteRating = async (req, res) => {
 
     return res.json(ratingToBeDeleted);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to delete Rating" });
   }
 };

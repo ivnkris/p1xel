@@ -1,3 +1,4 @@
+// importing dependencies
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
@@ -8,6 +9,7 @@ const connectSessionSequelize = require("connect-session-sequelize")(
   expressSession.Store
 );
 
+// importing dev created dependencies
 const sequelize = require("./config/connection");
 const routes = require("./routes");
 const logger = require("./middleware/logger");
@@ -17,6 +19,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
+// options used to create the session
 const sessionOptions = {
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -24,8 +27,10 @@ const sessionOptions = {
   store: new connectSessionSequelize({ db: sequelize }),
 };
 
+// adding helpers to handlebars
 const hbs = handlebars.create({ helpers });
 
+// setting handlebars as the view engine
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
@@ -37,14 +42,15 @@ app.use(express.static(path.join(__dirname, "../", "public")));
 app.use(logger);
 app.use(routes);
 
+// initializing server
 const init = async () => {
   try {
     await sequelize.sync();
     app.listen(PORT, () =>
-      console.log(`\nServer running on http://localhost:${PORT}\n`)
+      console.info(`\nServer running on http://localhost:${PORT}\n`)
     );
   } catch (error) {
-    console.log(error);
+    console.info(error);
     console.error("Failed to connect to DB");
   }
 };

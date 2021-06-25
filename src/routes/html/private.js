@@ -1,5 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
 
+// importing dev created dependencies
 const renderUserProfile = require("../../controllers/html/renderUserProfile");
 const renderChatRoomPage = require("../../controllers/html/renderChatRoomPage");
 const renderFollowersList = require("../../controllers/html/renderFollowersList");

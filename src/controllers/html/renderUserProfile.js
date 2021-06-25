@@ -1,7 +1,13 @@
-const STEAM_API_KEY = "B56468BAD7D8396DF9B20F6148A9080D";
+// importing dependencies
 const axios = require("axios");
+
+// importing required data models
 const { User, Followers } = require("../../models");
 
+// steam api key
+const STEAM_API_KEY = "B56468BAD7D8396DF9B20F6148A9080D";
+
+// this will render the profile page with required data. If steam information is not available, page will be rendered with an error message informing the user that there is no steam id linked to their account or that steam id is not matching any account in the steam database
 const renderUserProfile = async (req, res) => {
   try {
     const { steamUsername, userId } = req.session;
@@ -60,7 +66,7 @@ const renderUserProfile = async (req, res) => {
 
     const getAboutMe = async () => {
       const userData = await User.findByPk(userId);
-      console.log(userData.about_me);
+
       return userData.about_me;
     };
 
@@ -71,10 +77,10 @@ const renderUserProfile = async (req, res) => {
         },
         include: User,
       });
+
       const formattedFollowersData = followersData.map((follower) =>
         follower.get({ plain: true })
       );
-      console.log(formattedFollowersData);
       return formattedFollowersData;
     };
 
@@ -93,7 +99,6 @@ const renderUserProfile = async (req, res) => {
 
       const getAboutMe = async () => {
         const userData = await User.findByPk(userId);
-        console.log(userData.about_me);
         return userData.about_me;
       };
 
@@ -105,14 +110,12 @@ const renderUserProfile = async (req, res) => {
 
     const getAboutMe = async () => {
       const userData = await User.findByPk(userId);
-      console.log(userData.about_me);
       return userData.about_me;
     };
 
     const noSteamData = { userAboutMe: await getAboutMe() };
 
     console.error({ error: "Could not find the specified Steam ID" });
-
     res.render("user-profile", { noSteamData });
   }
 };

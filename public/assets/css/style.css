@@ -72,3 +72,33 @@ h2 {
   font-family: "Nova Square", cursive;
   justify-content: center;
 }
+
+.team-card-github {
+  position: absolute;
+  bottom: 7px;
+  left: 25%;
+}
+
+.team-card-linkedin {
+  position: absolute;
+  bottom: 7px;
+  left: 57%;
+}
+
+.scrollable-list {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollable-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

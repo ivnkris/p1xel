@@ -1,3 +1,4 @@
+// when the delete button is clicked, the game will be removed from the list it`s in ("Have Played" or "Want To Play")
 const onDelete = async (event) => {
   const id = event.currentTarget.id;
 
@@ -9,7 +10,7 @@ const onDelete = async (event) => {
   const response = await fetch(`/api/games/${id}`, options);
 
   if (response.status !== 200) {
-    console.log("Delete failed.");
+    console.info("Delete failed.");
   } else {
     window.location.replace("/user-games");
   }

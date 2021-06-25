@@ -12,6 +12,7 @@ P1xel app gives you the opportunity to view and rate games, new and old, popular
 [Getting started](#getting-started)
 [Technologies Used](#technologies-used)
 [Wire Frames](#wire-frames)
+[Database Model](#database-model)
 [Screenshots](#screenshots)
 [Future Improvements](#future-improvements)
 [License](#license)
@@ -44,18 +45,25 @@ You can visit our application by clicking [here](#)
 ## Getting started
 
 First, clone our repository by opening your terminal and running the following command:
+
 `git clone git@github.com:ivnkris/p1xel.git`
+
 Make sure to first select the desired folder in which you will clone our repository;
 
 Then, change your folder to the one containing our application:
+
 `cd p1xel`
 
 The third step is to install all of the dependencies. To do this, type in:
+
 `npm install`
 
-Now, you need to open the application with your code editor. If you`re using Visual Studio Code, type in the terminal the following command: `code .`
+Now, you need to open the application with your code editor. If you are using Visual Studio Code, type in the terminal the following command:
+
+`code .`
 
 Now, to run the app on your local machine, open the terminal in VSCode and run the app by typing in
+
 `npm run start`
 
 ## Technologies Used
@@ -86,7 +94,51 @@ We have used Draw.io to plan our application. We designed the main pages on a ve
 
 ![P1xel Wire Frame](public/assets/img/p1xel-wireframe.png)
 
+## Database Model
+
+![P1xel Database Model](public/assets/img/p1xel-database-model.png)
+
 ## Screenshots
+
+Public Homepage
+
+![Public Homepage](public/assets/img/public-homepage.png)
+
+Private Homepage
+
+![Private Homepage](public/assets/img/private-homepage.png)
+
+Game Page
+
+![Game Page](public/assets/img/game-page.png)
+
+Followers Page
+
+![Followers Page](public/assets/img/followers-page.png)
+
+Team Page
+
+![Team Page](public/assets/img/team-page.png)
+
+Login Page
+
+![Login Page](public/assets/img/login-page.png)
+
+Signup Page
+
+![Signup Pgae](public/assets/img/signup-page.png)
+
+Profile Page
+
+![Profile Page](public/assets/img/profile-page.png)
+
+Search Results Page
+
+![Search Results Page](public/assets/img/search-results-page.png)
+
+Compare Steam Achievements Page
+
+![Compare Steam Achievements Page](public/assets/img/compare-page.png)
 
 ## Future Improvements
 

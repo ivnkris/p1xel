@@ -1,4 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
+
+// importing dev created dependencies
 const {
   getAllUsers,
   getUserById,

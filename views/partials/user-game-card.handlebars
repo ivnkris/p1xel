@@ -1,10 +1,6 @@
 <div class="card mt-3 p-0 text-center" style="width: 21rem">
-  <img {{#if cover_art}}
-  src="{{cover_art}}"
-  {{else}}
-  data-type="/assets/img/imagenotfound.png"
-  src="/assets/img/imagenotfound.png"
-  {{/if}}
+
+  <img {{#if cover_art}} src="{{cover_art}}" {{else}} src="/assets/img/imagenotfound.png" {{/if}}
     class="card-img-top p-0" alt="..." />
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>

@@ -8,7 +8,9 @@
       <div
         class="col-lg-10 d-flex justify-content-around flex-row col-sm-12 row"
       >
+      {{#if data}}
         <div class="col-5 d-flex justify-content-around flex-column">
+          <h2 class="text-center">You</h2>
           <ul class="card list-group list-group-flush text-center">
             {{#each data.userData as |achievement|}}
               {{> user-compare-item}}
@@ -19,6 +21,7 @@
           </ul>
         </div>
         <div class="col-5 d-flex justify-content-around flex-column">
+          <h2 class="text-center">Follower</h2>
           <ul class="card list-group list-group-flush text-center">
             {{#each data.followerData as |achievement|}}
               {{> follower-compare-item}}
@@ -28,5 +31,11 @@
             </li>
           </ul>
         </div>
+        {{else}}
+        <div class="col-12 d-flex justify-content-center flex-column text-center">
+          <h2>Missing Data</h2>
+          <div>Please make sure that both you and your friend own the game you are trying to compare achievements for</div>
+        </div>
+        {{/if}}
       </div>
     </div>

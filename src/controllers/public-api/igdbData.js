@@ -1,11 +1,11 @@
+// importing dependencies
 const axios = require("axios");
 
+// handling search request
 const getGameData = async (req, res) => {
   const searchInput = req._parsedUrl.query;
 
   const stringifySearch = decodeURI(searchInput);
-
-  console.log(stringifySearch);
 
   if (searchInput) {
     const data = `fields name, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; search "${stringifySearch}";`;
@@ -19,15 +19,8 @@ const getGameData = async (req, res) => {
       },
       data: data,
     };
+
     const response = await axios(config);
-
-    // axios(config)
-    //   .then((res) => console.log(res, "1"))
-    //   .catch((err) => console.log(err));
-
-    console.log(response, "2");
-
-    // const results = response.data;
 
     res.json(response.data);
   } else {

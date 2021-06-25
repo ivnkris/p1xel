@@ -1,5 +1,7 @@
+// importing dependencies
 const { User, Game, Rating, Comment } = require("../../models");
 
+// performing CRUD operations on comments in our database
 const getAllComments = async (req, res) => {
   try {
     const allCommentsData = await Comment.findAll({
@@ -8,10 +10,11 @@ const getAllComments = async (req, res) => {
 
     return res.status(200).json(allCommentsData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
     return res.status(500).json({ error: "Failed to get Comments." });
   }
 };
+
 const getCommentById = async (req, res) => {
   try {
     const singleCommentData = await Comment.findByPk(req.params.id, {
@@ -20,10 +23,11 @@ const getCommentById = async (req, res) => {
 
     return res.status(200).json(singleCommentData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
     return res.status(500).json({ error: "Failed to get Comment." });
   }
 };
+
 const addComment = async (req, res) => {
   // Test in Postman with:
 
@@ -39,10 +43,11 @@ const addComment = async (req, res) => {
 
     return res.status(200).json(newComment);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
     return res.status(500).json({ error: "Failed to add Comment" });
   }
 };
+
 const updateComment = async (req, res) => {
   // Test in Postman with:
 
@@ -58,10 +63,11 @@ const updateComment = async (req, res) => {
     });
     return res.status(200).json(commentToBeUpdated);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
     return res.status(500).json({ error: "Failed to update Comment" });
   }
 };
+
 const deleteComment = async (req, res) => {
   try {
     const commentToBeDeleted = await Comment.destroy({
@@ -72,7 +78,7 @@ const deleteComment = async (req, res) => {
 
     return res.json(commentToBeDeleted);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
     return res.status(500).json({ error: "Failed to delete Comment" });
   }
 };

@@ -1,5 +1,7 @@
+// importing dependencies
 const { User } = require("../../models");
 
+// this handles the login request. If credentials match, a session will be saved with user info and user will be able to access different private endpoint on the app. If the credentials do not match, an error wil be thrown.
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -29,10 +31,12 @@ const login = async (req, res) => {
     });
   } catch (error) {
     console.error(error.message);
+
     return res.status(500).json({ error: "Failed to login" });
   }
 };
 
+// this will handle the logout post, deleting the session created previously, when the respective user logged in.
 const logout = (req, res) => {
   if (req.session.isLoggedIn) {
     req.session.destroy(() => {
@@ -43,6 +47,7 @@ const logout = (req, res) => {
   }
 };
 
+// this will verify the signup credential and if all required fields are successfully completed, the user will be added to our database
 const signup = async (req, res) => {
   try {
     const {
@@ -73,7 +78,8 @@ const signup = async (req, res) => {
 
     return res.status(400).json({ error: "Could not create profile." });
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Could not create profile." });
   }
 };
