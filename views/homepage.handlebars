@@ -44,7 +44,8 @@
     </div>
     <!-- carousel 2 -->
     {{#if isLoggedIn}}
-    <h4 class="mt-4">Player Games</h4>
+    {{#if games}}
+        <h4 class="mt-4">Player Games</h4>
     <div id="carouselExampleCaptions2" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         {{#each games as |game|}}
@@ -81,6 +82,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    {{/if}}
     {{/if}}
   </div>
        <!-- container 3 -->

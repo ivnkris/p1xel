@@ -6,6 +6,9 @@ const renderSearchResults = async (req, res) => {
   const options = {
     layout: "main",
   };
+
+  const { isLoggedIn } = req.session;
+
   const searchInput = req.query.search;
 
   const stringifySearch = decodeURI(searchInput);
@@ -31,18 +34,18 @@ const renderSearchResults = async (req, res) => {
         each.userId = req.session.userId;
       });
 
-      return res.render("search-results", { options, results });
+      return res.render("search-results", { options, results, isLoggedIn });
     } else {
       results.emptySearch = true;
 
-      return res.render("search-results", { options, results });
+      return res.render("search-results", { options, results, isLoggedIn });
     }
   } else {
     const results = {};
 
     results.emptySearch = true;
 
-    return res.render("search-results", { options, results });
+    return res.render("search-results", { options, results, isLoggedIn });
   }
 };
 
