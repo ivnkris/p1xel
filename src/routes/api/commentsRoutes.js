@@ -1,4 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
+
+// importing user created dependencies
 const {
   getAllComments,
   getCommentById,
@@ -9,6 +12,7 @@ const {
 
 const router = Router();
 
+// different routes that can be accessed
 router.get("/", getAllComments);
 router.get("/:id", getCommentById);
 router.post("/", addComment);

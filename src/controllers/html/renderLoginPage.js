@@ -1,3 +1,4 @@
+// renders login page
 const renderLoginPage = (req, res) => {
   const options = {
     layout: "login",

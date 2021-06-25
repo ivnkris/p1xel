@@ -1,5 +1,7 @@
+// importing dependencies
 const bcrypt = require("bcrypt");
 
+// hashing password before seeding the database
 const beforeBulkCreate = async (users) => {
   const promises = users.map((user) => {
     return bcrypt.hash(user.password, 10);
@@ -12,6 +14,7 @@ const beforeBulkCreate = async (users) => {
   });
 };
 
+// hashing user password before interacting with it
 const beforeCreate = async (user) => {
   user.password = await bcrypt.hash(user.password, 10);
 };

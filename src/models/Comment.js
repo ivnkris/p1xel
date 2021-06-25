@@ -1,7 +1,10 @@
+// importing dependencies
 const { Model, DataTypes } = require("sequelize");
 
+// importing dev-created dependencies
 const sequelize = require("../config/connection");
 
+// options for comments model
 const options = {
   sequelize,
   modelName: "comment",
@@ -10,6 +13,7 @@ const options = {
   freezeTableName: true,
 };
 
+// comments model schema
 const schema = {
   id: {
     type: DataTypes.INTEGER,

@@ -1,9 +1,11 @@
+// importing models
 const User = require("./User");
 const Game = require("./Game");
 const Rating = require("./Rating");
 const Comment = require("./Comment");
 const Followers = require("./Followers");
 
+// creating relationships between models
 Game.belongsTo(User, {
   foreignKey: "user_id",
   onDelete: "CASCADE",

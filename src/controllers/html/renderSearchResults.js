@@ -1,5 +1,7 @@
+// importing dependencies
 const axios = require("axios");
 
+// renders search results page with required data
 const renderSearchResults = async (req, res) => {
   const options = {
     layout: "main",
@@ -32,11 +34,14 @@ const renderSearchResults = async (req, res) => {
       return res.render("search-results", { options, results });
     } else {
       results.emptySearch = true;
+
       return res.render("search-results", { options, results });
     }
   } else {
     const results = {};
+
     results.emptySearch = true;
+
     return res.render("search-results", { options, results });
   }
 };

@@ -1,3 +1,4 @@
+// on submit, the game will be added to the "Have Played" or "Want To Play" list.
 const onSubmit = async (event) => {
   event.preventDefault();
   let want_game;
@@ -6,6 +7,7 @@ const onSubmit = async (event) => {
   const form = $(event.currentTarget);
 
   const buttonType = $(document.activeElement).attr("data-type");
+
   if (buttonType === "want-to-play") {
     want_game = true;
   } else if (buttonType === "have-played") {
@@ -36,11 +38,13 @@ const onSubmit = async (event) => {
       user_id,
     }),
   };
+
   const response = await fetch(`/api/games/`, options);
+
   if (response.status !== 200) {
     console.error(error.message);
   } else {
-    console.log("added to my games");
+    console.info("Game successfully added to my games");
   }
 };
 

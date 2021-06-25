@@ -1,5 +1,7 @@
+// importing dependencies
 const { User, Game, Rating, Comment } = require("../../models");
 
+// performing CRUD operations on Users
 const getAllUsers = async (req, res) => {
   try {
     const allUsersData = await User.findAll({
@@ -8,10 +10,12 @@ const getAllUsers = async (req, res) => {
 
     return res.status(200).json(allUsersData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to get Users." });
   }
 };
+
 const getUserById = async (req, res) => {
   try {
     const singleUserData = await User.findByPk(req.params.id, {
@@ -20,10 +24,12 @@ const getUserById = async (req, res) => {
 
     return res.status(200).json(singleUserData);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to get User." });
   }
 };
+
 const addUser = async (req, res) => {
   // Test post method with this:
 
@@ -43,10 +49,12 @@ const addUser = async (req, res) => {
 
     return res.status(200).json(newUser);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to add User" });
   }
 };
+
 const updateUser = async (req, res) => {
   // Test post method with this:
   /*{
@@ -62,10 +70,12 @@ const updateUser = async (req, res) => {
 
     return res.status(200).json(userToBeUpdated);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to update User" });
   }
 };
+
 const deleteUser = async (req, res) => {
   try {
     const userToBeDeleted = await User.destroy({
@@ -76,7 +86,8 @@ const deleteUser = async (req, res) => {
 
     return res.json(userToBeDeleted);
   } catch (error) {
-    console.log(error.message);
+    console.info(error.message);
+
     return res.status(500).json({ error: "Failed to delete User" });
   }
 };

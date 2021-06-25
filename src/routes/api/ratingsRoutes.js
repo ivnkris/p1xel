@@ -1,4 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
+
+// importing dev created dependencies
 const {
   getAllRatings,
   getRatingById,
@@ -9,6 +12,7 @@ const {
 
 const router = Router();
 
+// different routes that can be accessed
 router.get("/", getAllRatings);
 router.get("/:id", getRatingById);
 router.post("/", addRating);

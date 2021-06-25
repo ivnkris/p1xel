@@ -1,11 +1,16 @@
+// importing axios
 const axios = require("axios");
+
+// importing dev created dependencies
 const { Game, User } = require("../../models");
 
+// rendering homepage. if data is not available, an error message will be thrown
 const renderHomePage = async (req, res) => {
   try {
     const data = `fields name,rating, cover.url;
     sort rating desc;
     where rating != null;`;
+
     const config = {
       method: "post",
       url: "https://api.igdb.com/v4/games",
@@ -16,6 +21,7 @@ const renderHomePage = async (req, res) => {
       },
       data: data,
     };
+
     const response = await axios(config);
 
     const topResults = response.data;
@@ -25,10 +31,11 @@ const renderHomePage = async (req, res) => {
       const formattedUsersData = usersData.map((user) =>
         user.get({ plain: true })
       );
-      console.info(formattedUsersData);
+
       return formattedUsersData;
     };
 
+    // user data will be brought in if user is logged in
     if (req.session.isLoggedIn) {
       const gameData = await Game.findAll({
         where: {
@@ -49,12 +56,12 @@ const renderHomePage = async (req, res) => {
         user.get({ plain: true })
       );
 
-      console.log(req.session);
       const { userId } = req.session;
+
       const games = await Game.findAll({
         where: { user_id: userId },
       });
-      console.log(games);
+
       const formatGames = games.map((game) => game.get({ plain: true }));
 
       const dataObject = {
@@ -68,6 +75,7 @@ const renderHomePage = async (req, res) => {
 
       return res.render("homepage", dataObject);
     } else {
+      // if user is not logged in, page will be rendered with limited, non-specific data
       const dataObject = {
         topResults,
         isLoggedIn: req.session.isLoggedIn,
@@ -78,6 +86,7 @@ const renderHomePage = async (req, res) => {
     }
   } catch (error) {
     console.info(`[ERROR] - ${error.message}`);
+
     res.status(500).json({ error: "Failed to render homepage" });
   }
 };

@@ -1,3 +1,4 @@
+// when the sign up form is submitted, this will check if all of the necessary fields are completed and, if this is the case, will perform a post request tot he specified endpoint, adding the credentials to our database. Upon successful sign up. the user will be redirected to the login page
 const handleSubmit = async (event) => {
   event.preventDefault();
 
@@ -9,8 +10,6 @@ const handleSubmit = async (event) => {
   const confirmPassword = $("#confirmPassword").val();
   const steamUsername = $("#steamUsername").val();
   const aboutMe = $("#aboutMe").val();
-
-  console.log(aboutMe);
 
   const options = {
     method: "POST",
@@ -27,8 +26,6 @@ const handleSubmit = async (event) => {
     }),
   };
 
-  console.log(steamUsername);
-
   if (!firstName || !lastName || !username || !password || !confirmPassword) {
     $("#signup-alert").text(
       "Please make sure all fields are filled correctly!"
@@ -39,11 +36,11 @@ const handleSubmit = async (event) => {
     const response = await fetch("/auth/signup", options);
 
     if (response.status !== 200) {
-      console.log("Failed Sign Up");
+      console.info("Failed Sign Up");
     } else {
       window.location.replace("/login");
     }
-    console.log("Successfully registered!");
+    console.info("Successfully registered!");
   } else {
     $("#signup-alert").text("Your passwords do not match!");
   }

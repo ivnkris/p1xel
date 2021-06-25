@@ -1,5 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
 
+// impoting dev created dependencies
 const {
   getAllFollowers,
   followNewUser,
@@ -8,6 +10,7 @@ const {
 
 const router = Router();
 
+// different routes that cad be accessed
 router.get("/:id", getAllFollowers);
 router.post("/", followNewUser);
 router.delete("/", unfollowUser);

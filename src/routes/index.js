@@ -1,5 +1,7 @@
+// importing dependencies
 const { Router } = require("express");
 
+// importing dev created dependencies
 const apiRoutes = require("./api");
 const htmlRoutes = require("./html");
 const authRoutes = require("./auth");
