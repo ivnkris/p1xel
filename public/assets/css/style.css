@@ -72,3 +72,15 @@ h2 {
   font-family: "Nova Square", cursive;
   justify-content: center;
 }
+
+.team-card-github {
+  position: absolute;
+  bottom: 7px;
+  left: 25%;
+}
+
+.team-card-linkedin {
+  position: absolute;
+  bottom: 7px;
+  left: 57%;
+}
