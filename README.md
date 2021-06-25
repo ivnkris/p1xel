@@ -8,6 +8,7 @@ P1xel app gives you the opportunity to view and rate games, new and old, popular
 
 [Introduction](#introduction)
 [Description](#description)
+[User Story](#user-story)
 [Link To Deployed Application](#link-to-deployed-application)
 [Getting started](#getting-started)
 [Technologies Used](#technologies-used)
@@ -38,9 +39,60 @@ If the user knows one of the other users, he can Follow him. When a user follows
 
 If the user tries to access one of the private routes such as the dashboard, he will be redirected to the Login page. If he does not own an account, he can then choose to go to the Sign-up page to create an account.
 
+## User Story
+
+```md
+AS A USER I want to use a web application to view games, their info and interact with other gamers;
+
+WHEN I open the homepage and I am not logged in,
+THEN I AM presented with a carousel displaying current games, a navbar, a search bar and a list of current registered users;
+
+WHEN I Click the Sign Up button in the Navbar,
+THEN I AM redirected to a page displaying a form accepting my credentials;
+
+WHEN I choose to Sign Up and my credentials are correct,
+THEN I AM redirected to the Log In page;
+
+WHEN I input my credentials in the Log In form and I press the Log In button, if my credentials are correct
+THEN I AM redirected to my profile page;
+
+WHEN I am redirected to my profile page,
+THEN I AM presented with a profile picture, an About Me section;
+
+IF I have a Steam Account linked to my P1xel Account, and I access my Profile Page,
+THEN I am presented with my Steam Information such as Profile Photo, Recently Played Games and Steam friends;
+
+WHEN I go back to the homepage
+THEN I AM presented with a carousel displaying Top Games, a list of current users and, for each user, a button to be able to add them to my followers list;
+
+WHEN I click the Team button,
+THEN I am redirected to the Team page displaying information about the P1xel App Team, their pictures, GitHub and LinkedIn links;
+
+WHEN I search for a game
+THEN I AM redirected to the search results page that is containing all of the games that return from the search;
+
+WHEN I click on a game inside the search results page,
+THEN I AM redirected to a page displaying more detailed information about that game such as photo, description and a carousel containing; screenshots
+
+WHEN from the Search Results Page, for any game, I click on either the "Want to Play" or "Have Played" button,
+THEN that specific game is added to either the "Want to Play" or "Have Played" list;
+
+WHEN I select the "Games" button,
+THEN I am redirected to the Games page that holds all of my games that I either have played or that I want to play;
+
+WHEN I select the Followers button,
+THEN I AM redirected to the followers page displaying all of the followers data;
+
+WHEN I select a game from the dropdown menu AND I click the "Compare Achievements" button on the followers page,
+THEN I am redirected to the "compare achievements" page, that is displaying the achievements for both users, side by side, the status (achieved or not achieved) and, if achieved, the date of that achievement;
+
+WHEN I select the Log Out button,
+THEN I am signed out of the application;
+```
+
 ## Link To Deployed Application
 
-You can visit our application by clicking [here](#)
+You can visit our application by clicking [here](https://fast-shelf-77951.herokuapp.com/)
 
 ## Getting started
 
@@ -156,9 +208,9 @@ P1xel Application is licensed under the MIT license
 
 For any questions you can reach to us via GitHub or LinkedIn:
 
-- Adam Arthur: [GitHub](), [LinkedIn]()
-- Lee Farnell: [GitHub](https://github.com/LeeFarnell), [LinkedIn]()
-- Mehmet Hakel Cam: [GitHub](https://github.com/Hakkelo89), [LinkedIn]()
-- Michael Crates: [GitHub](https://github.com/Cratesy), [LinkedIn]()
-- Kris Ivan: [GitHub](https://github.com/ivnkris), [LinkedIn]()
-- Tudor Tocan: [GitHub](https://github.com/ttudorandrei), [LinkedIn]()
+- Adam Arthur: [GitHub](https://github.com/KingArthur0877), [LinkedIn](https://www.linkedin.com/in/adam-arthur-315b39156/)
+- Lee Farnell: [GitHub](https://github.com/LeeFarnell), [LinkedIn](https://www.linkedin.com/in/leefarnell/)
+- Mehmet Hakel Cam: [GitHub](https://github.com/Hakkelo89), [LinkedIn](https://www.linkedin.com/in/mehmet-hakel-cam-058439163/)
+- Michael Crates: [GitHub](https://github.com/Cratesy), [LinkedIn](https://www.linkedin.com/in/michael-crates-538752200/)
+- Kris Ivan: [GitHub](https://github.com/ivnkris), [LinkedIn](https://www.linkedin.com/in/krisztian-ivan-10880478/)
+- Tudor Tocan: [GitHub](https://github.com/ttudorandrei), [LinkedIn](https://www.linkedin.com/in/tudor-tocan/)
