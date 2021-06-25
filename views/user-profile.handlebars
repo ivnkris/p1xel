@@ -7,6 +7,15 @@
         <!-- profile pic and about me  -->
         <div class="row container m-2 p-2">
           <div class="col col-lg-4 col-md-12">
+            {{#if data.userData.avatarfull}}
+            <img
+              src={{data.userData.avatarfull}}
+              alt="profile picture"
+              width="200px"
+              height="auto"
+              class="rounded-circle"
+            />
+            {{else}}
             <img
               src="../assets/img/profile_img.png"
               alt="profile picture"
@@ -14,6 +23,7 @@
               height="auto"
               class="rounded-circle"
             />
+            {{/if}}
           </div>
 
           <!-- about me section -->

@@ -10,6 +10,7 @@
       >
       {{#if data}}
         <div class="col-5 d-flex justify-content-around flex-column">
+          <h2 class="text-center">You</h2>
           <ul class="card list-group list-group-flush text-center">
             {{#each data.userData as |achievement|}}
               {{> user-compare-item}}
@@ -20,6 +21,7 @@
           </ul>
         </div>
         <div class="col-5 d-flex justify-content-around flex-column">
+          <h2 class="text-center">Follower</h2>
           <ul class="card list-group list-group-flush text-center">
             {{#each data.followerData as |achievement|}}
               {{> follower-compare-item}}
