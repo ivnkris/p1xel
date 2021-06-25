@@ -8,6 +8,8 @@ const renderGamePage = async (req, res) => {
   };
   const { id: gameId } = req.params;
 
+  const { isLoggedIn } = req.session;
+
   const data = `fields name, summary, cover.url, screenshots.url, rating, multiplayer_modes, release_dates.date, platforms.name, genres.name; where id =${gameId};`;
 
   const config = {
@@ -27,7 +29,7 @@ const renderGamePage = async (req, res) => {
 
   const game = results[0];
 
-  return res.render("games", { options, game });
+  return res.render("games", { options, game, isLoggedIn });
 };
 
 module.exports = renderGamePage;
