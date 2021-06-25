@@ -1,9 +1,9 @@
-<div class="container-fluid row my-container m-0 p-1">
+<div class="container-fluid row my-container m-0 mt-3 p-1">
       <!-- container 1 -->
       {{> private-navbar}}
 
       <!-- container 2 -->
-      <div class="col-lg-8 col-sm-12">
+      <div class="col-lg-8 col-sm-12 mt-3">
         <!-- profile pic and about me  -->
         <div class="row container m-2 p-2">
           <div class="col col-lg-4 col-md-12">
@@ -31,15 +31,18 @@
         <div class="row container m-2 d-flex justify-content-around my-5">
           <!-- Steam Profile Info -->
           {{#if data}}
+          <h3 class="text-center border-top pt-5">Steam Profile</h3>
           <div class="col col-12 row my-3">
             <div class="col-12 text-center">
               <img src={{data.userData.avatarmedium}} alt="steam profile img" width="100px" height="auto">
               <div class="m-2">{{data.userData.personaname}}</div>
               <div class="m-2"><a href={{data.userData.profileurl}} target="_blank">View my profile on Steam</a></div>
-              <div class="m-2">Previous Login: <span>{{formattedDate data.userData.lastlogoff}}</span></div>
+              {{#if data.userData.lastlogoff}}<div class="m-2">Previous Login: <span>{{formattedDate data.userData.lastlogoff}}</span></div>{{/if}}
             </div>
           </div>
           <!-- Recently PLayed Games -->
+          <h3 class="text-center pt-5">Recently Played Games</h3>
+
           <div class="col col-12 row d-flex justify-content-around my-3">
             {{#each data.userPlayedGames as |game|}}
             {{> steam-game-card}}
@@ -47,6 +50,7 @@
 
           </div>
           <!-- steam friends -->
+          <h3 class="text-center pt-5">My Steam Friends</h3>
           <div class="col col-12 row d-flex justify-content-around my-3">
             
             {{#each data.userFriendsList.friendsProfiles as |friend|}}
@@ -72,9 +76,9 @@
       </div>
 
       <!-- container 3 -->
-      <div class="col col-lg-2 col-md-12">
+      <div class="col col-lg-2 col-md-12 mt-3">
         <h4>Followers List</h4>
-        <div class="list-group">
+        <div class="list-group scrollable-list">
           {{#each data.userFollowers as |follower|}}
           {{> follower-card}}
           {{/each}}

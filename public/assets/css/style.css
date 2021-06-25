@@ -84,3 +84,21 @@ h2 {
   bottom: 7px;
   left: 57%;
 }
+
+.scrollable-list {
+  height: 350px;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollable-list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

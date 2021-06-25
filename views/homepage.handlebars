@@ -86,7 +86,7 @@
        <!-- container 3 -->
       <div class="col-lg-2 col-sm-12 text-center">
         <h4>Users</h4>
-        <ul class="list-group">
+        <ul class="list-group scrollable-list">
 
           {{#if isLoggedIn}}
           {{#each users}}
@@ -97,6 +97,5 @@
             {{> user-list-item-public}}
           {{/each}}
           {{/if}}
-
       </ul>
 </div>

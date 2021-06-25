@@ -5,6 +5,10 @@
   <div class="card-body">
     <h5 class="card-title">{{personaname}}</h5>
     <p class="card-text"><a href={{profileurl}} target="_blank">View on Steam</a></p>
-    <p class="card-text">Country: {{loccountrycode}}</p>
+    {{#if loccountrycode}}
+      <p class="card-text">Country:{{loccountrycode}}</p>
+    {{else}}
+      <p class="card-text">Location N/A</p>
+    {{/if}}
   </div>
 </div>
