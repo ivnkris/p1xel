@@ -6,17 +6,21 @@ P1xel app gives you the opportunity to view and rate games, new and old, popular
 
 ## Table of contents
 
-[Introduction](#introduction)
-[Description](#description)
-[Link To Deployed Application](#link-to-deployed-application)
-[Getting started](#getting-started)
-[Technologies Used](#technologies-used)
-[Wire Frames](#wire-frames)
-[Database Model](#database-model)
-[Screenshots](#screenshots)
-[Future Improvements](#future-improvements)
-[License](#license)
-[Contact the Team](#contact-the-team)
+- [P1XEL](#p1xel)
+  - [Introduction](#introduction)
+  - [Table of contents](#table-of-contents)
+  - [Description](#description)
+  - [Link To Deployed Application](#link-to-deployed-application)
+  - [Getting started](#getting-started)
+  - [Technologies Used](#technologies-used)
+    - [MVC](#mvc)
+    - [API](#api)
+  - [Wire frames](#wire-frames)
+  - [Database Model](#database-model)
+  - [Screenshots](#screenshots)
+  - [Future Improvements](#future-improvements)
+  - [License](#license)
+  - [Contact the Team](#contact-the-team)
 
 ## Description
 
@@ -40,7 +44,7 @@ If the user tries to access one of the private routes such as the dashboard, he 
 
 ## Link To Deployed Application
 
-You can visit our application by clicking [here](#)
+You can visit our application by clicking [here](https://fast-shelf-77951.herokuapp.com/)
 
 ## Getting started
 
