@@ -16,7 +16,7 @@ const renderHomePage = async (req, res) => {
       url: "https://api.igdb.com/v4/games",
       headers: {
         "Client-ID": "zgvole5aqniz8rnu55rvoxmw3h8d8x",
-        Authorization: "Bearer zzrepo6q4zb5jvw5jxqswmpgc6ef0s",
+        Authorization: "Bearer t7i5em989475nbc96qusz36uvs1vmu",
         "Content-Type": "application/json",
       },
       data: data,
